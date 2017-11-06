@@ -1,0 +1,40 @@
+<ion-view  cache-view="false" view-title="Medicamentos em Uso" class="texto-default nesseciesp">
+
+    <ion-nav-bar class="custom-color bar-balanced">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+
+     <form name="medicamentos_form">
+    <ion-content class="especialidades">  
+        <div class="list list-inset centralizar"> 
+            <button class="button button-positive btnMedicamento" ng-click="historicoPeriodo()">Historico</button> 
+            <button class="button button-positive btnMedicamento " ng-click="cadastroMedicamentos()">Cadastre seus Medicamentos</button>
+        </div>                
+
+        <ion-list>
+        <div ng-repeat="medicamento in listaMedicamentos">
+          <ion-item class="item-stable"
+                    ng-click="toggleGroup(medicamento)"
+                    ng-class="{active: isGroupShown(medicamento)}">
+              <i class="icon" ng-class="isGroupShown(medicamento) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+              {{medicamento.NomeMedicamento}}                  
+          </ion-item>    
+          <ion-item class="item-accordion"                   
+                    ng-show="isGroupShown(medicamento)">  
+          <a href="#/menu/medicamentos/historico/{{medicamento}}" class="button tempo-espera-hospital">Histórico</a> &nbsp; &nbsp; &nbsp;   
+          <a href="#menu/medicamentos/editar/{{medicamento}}" class="button tempo-espera-hospital">Editar</a>
+          <a href="#/menu/medicamentos/alarme/{{medicamento}}" class="button tempo-espera-hospital">Alarme</a>           
+          </ion-item>
+
+        </div>
+      </ion-list>
+
+    </ion-content>     
+   
+   </form> 
+
+</ion-view>

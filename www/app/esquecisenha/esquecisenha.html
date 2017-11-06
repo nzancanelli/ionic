@@ -1,0 +1,39 @@
+<ion-view cache-view="true" view-title="Esqueci Senha">
+
+    <ion-nav-bar class="custom-color bar-balanced">
+
+        <ion-nav-back-button>
+       </ion-nav-back-button>		
+        <ion-nav-buttons>
+    </ion-nav-buttons>
+      
+        
+
+ 
+  <ion-content class="cadastrar">
+
+      <form name="esquecisenha">
+    
+      <div class="vertical-align">
+        <img class="logo1" />
+       </div>
+     
+      <div class="list list-inset">
+                 
+          <label class="item item-input item-stacked-label">
+             <input type="email" placeholder="Digite o email" ng-model="usuario.email" name="email" required             >
+             <span class="validacao" ng-show="esquecisenha.email.$touched && esquecisenha.email.$error.required">Email é obrigatório</span>
+             <span class="validacao" ng-show= "esquecisenha.email.$touched && esquecisenha.email.$error.email">Formato do email é inválido</span>
+          </label>      
+          
+      </div>
+      
+      <div class="cadastrar1">
+         <span>                    
+          <button class="button button-block button-positive" ng-click="enviaremail()"> Enviar </button>
+         <span>
+      <div>   
+           
+    </form>      
+    </ion-content>
+</ion-view>

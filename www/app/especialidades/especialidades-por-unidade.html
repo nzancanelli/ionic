@@ -1,0 +1,23 @@
+<ion-view cache-view="true" view-title="Especialidades">
+  <ion-nav-bar class="custom-color bar-balanced">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content class="especialidades">
+    <div class="loading" ng-if="service.carregando">
+      <ion-spinner icon="ripple"></ion-spinner>
+      <p>Carregando especialidades...</p>
+    </div>
+    <div class="loading" ng-show="service.carregando == false && especialidades.length == 0">
+      <p>Não foram encontrados especialidades cadastradas!</p>
+    </div>
+    <ion-list>
+      <ion-item ng-repeat="especialidade in especialidades" href="#/menu/app/hospitais/{{idHospital}}">
+        {{especialidade.nome|lowercase}}
+        <i class="icon icon-seta_direita"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

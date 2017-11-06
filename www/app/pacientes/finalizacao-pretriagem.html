@@ -1,0 +1,62 @@
+<ion-view cache-view="false" view-title="Finalizacão Pré-triagem" class=main>
+
+  <ion-nav-bar class="custom-color bar-balanced">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons side="right">
+      <button class="button button-icon button-clear ion-map" ng-click="mostrarMapa()"></button>
+    </ion-nav-buttons>
+
+
+
+
+    <ion-content class="padding">
+      <div class="card">
+        <div class="item">
+          <img class="logo2">
+        </div>
+
+        <div class="item item-body">
+
+          <div class="detalhe">
+
+            <h2>{{ hospital.nome }}</h2>
+
+            {{ hospital.endereco.logradouro }}, {{ hospital.endereco.numero }}
+            <br />{{ hospital.endereco.bairro }}
+            <br /> {{ hospital.endereco.cidade }} - {{ hospital.endereco.estado }}
+            <br />
+            <i class="ion-ios-telephone"></i> ({{ hospital.telefone[0].DDD }}) {{ hospital.telefone[0].numeroTelefone}}
+
+            <h3> Especialidades </h3>
+            <i>{{nmespecialidade}} </i>
+            <br/>
+            <h3> Paciente </h3>
+            <i>{{nmpaciente}}
+              <br/>
+              <i ng-if="preferencial == true">Paciente Preferencial</i>
+              <br/>
+              <h3>Pré-Triagem Número</h3>
+              <i>{{numpretriagem}}</I>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </ion-content>
+
+    <div class="button-app2">
+      <button class="button button-block icon-left ion-checkmark" ng-click="Paciente()" ng-disabled="salvaOk">
+        <a>Triagem de outro Paciente</a>
+      </button>
+
+      <button class="button button-block icon-left ion-ios-arrow-back" ng-click="VoltarParaHome()" ng-disabled="salvaOk">
+          <a>Voltar para o início</a>
+        </button>
+    </div>
+
+
+
+</ion-view>

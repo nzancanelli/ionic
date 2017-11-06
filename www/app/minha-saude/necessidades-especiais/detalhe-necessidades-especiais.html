@@ -1,0 +1,26 @@
+<ion-view cache-view="false" view-title="Necessidades especiais" class="texto-default necesEspec">
+
+    <ion-nav-bar class="custom-color bar-balanced">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content class="applyFooter">
+        <ion-list>
+            <ion-item ng-repeat="necessidade in necessidades" class="no-padding item">
+                <ion-checkbox ng-checked="necessidade.Checked" ng-model="necessidade.Checked" ng-click="Selecionar(necessidade.Checked,necessidade)">
+                    <h4> {{necessidade.DescricaoNecessidade}}</h4>
+                </ion-checkbox>
+            </ion-item>
+            <ion-item class="no-padding item">
+                <ion-checkbox ng-checked="selecionadas.length == 0" ng-model="nenhumaSelecao" ng-click="SelecionarNenhumaOpcao(necessidades,nenhumaSelecao)">
+                    <h4> Nenhum problema identificado</h4>
+                </ion-checkbox>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <div class="bar bar-footer bar-stable">
+        <a ng-click="adicionarNecessidades()" class="button button-rodape-full">SALVAR</a>
+    </div>
+</ion-view>

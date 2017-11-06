@@ -1,0 +1,66 @@
+<ion-view cache-view="false" view-title="Finalizar Pré-triagem"class=main>
+
+    <ion-nav-bar class="custom-color bar-balanced">
+        <ion-nav-back-button>
+       </ion-nav-back-button>		
+        <ion-nav-buttons>
+        </ion-nav-buttons>
+
+
+  <ion-content class="padding" >       
+  <div class = "card">
+     <div class = "item">
+        <img class="logo2">   
+     </div>
+
+      <div class = "item item-body">
+
+         <div class="detalhe">
+                   
+            
+            <h2>{{ hospital.nome }}</h2>
+            <p>
+                {{ hospital.endereco.logradouro }}, {{ hospital.endereco.numero }} 
+                <br />{{ hospital.endereco.bairro }}
+                <br /> {{ hospital.endereco.cidade }} - {{ hospital.endereco.estado }}
+                <br /> 
+                <i class="ion-ios-telephone"></i> ({{ hospital.telefone[0].DDD }}) {{ hospital.telefone[0].numeroTelefone}}  
+                <p> 
+                 <h3> Especialidades </h3>                
+                 <i>{{nmespecialidade}} </i>
+                 <br/>
+                 <h3> Paciente </h3>
+                 <i>{{nmpaciente}}
+                 <br/>
+                 <i ng-if="preferencial == true">Paciente Preferencial</i>
+
+            </p>     
+         </div>
+        </div>
+
+    </div>
+
+   
+
+  </ion-content>
+
+   <div class="button-app1" >
+      
+      <button class="button button-block icon-left ion-checkmark"  ng-click="finalizapretriagem()" ng-disabled="salvaOk" ><i class="iconeFooter "></i><a>Finalize sua Pré-Triagem
+          </button>
+    
+    </div>
+
+
+ <!--   <div class="bar bar-footer bar-light footer-buttons">
+    <div class="row">
+        <div class="col">
+            <button class="button button-balanced button-clear icon-left ion-navicon" ng-click="save()">Save</button>	
+        </div>
+        <div class="col">
+            <button class="button button-balanced button-clear icon-left ion-ios-close-empty" ng-click="add()">Cancel</button>	
+        </div>
+    </div>
+</div> -->
+
+</ion-view>  

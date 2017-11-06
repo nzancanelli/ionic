@@ -1,0 +1,256 @@
+---Carga na tabela hospitais.APPHOSP_USUARIO 
+
+Insert into hospitais.APPHOSP_USUARIO(NM_USUARIO,CPF,DT_NASCIMENTO, DT_CRIACAO) 
+values('Teste 1',null,null, sysdate);
+
+Insert into hospitais.APPHOSP_USUARIO(NM_USUARIO,CPF,DT_NASCIMENTO, DT_CRIACAO) 
+values('Teste 2',null,null, sysdate);
+--------------------------------------------------------------------------------
+---Carga na tabela hospitais.APPHOSP_CIRURGIA_USUARIO
+
+Insert into hospitais.APPHOSP_CIRURGIA_USUARIO(ID_USUARIO,DS_CIRURGIA,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+values(1,'Cirurgia Complicada','1',sysdate,null);
+
+Insert into hospitais.APPHOSP_CIRURGIA_USUARIO(ID_USUARIO,DS_CIRURGIA,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+values(2,'Procedimento Cirurgico no Joelho','1',sysdate,null);
+
+--------------------------------------------------------------------------------
+---Carga na tabela hospitais.APPHOSP_DADOS_MONIT_PARAM;
+Insert into HOSPITAIS.APPHOSP_DADOS_MONIT_PARAM(ID_USUARIO,DS_PARAMETRO,DS_UNIDADE_MEDIDA,FL_ATIVO, DT_CRIACAO,DT_EXCLUSAO)
+values (1,'Peso','KG',1, sysdate, null);
+
+Insert into HOSPITAIS.APPHOSP_DADOS_MONIT_PARAM(ID_USUARIO,DS_PARAMETRO,DS_UNIDADE_MEDIDA,FL_ATIVO, DT_CRIACAO,DT_EXCLUSAO)
+values (2,'Altura','MT',1, sysdate, null);
+
+--------------------------------------------------------------------------------
+---Carga na tabela hospitais.APPHOSP_ANTECEDENTE_USUARIO;
+
+Insert into hospitais.APPHOSP_ANTECEDENTE_USUARIO(ID_USUARIO, DS_ANTECEDENTE_PARAMETRO ,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+values(1,'Diabetes', 1, sysdate, null) ;
+
+
+Insert into hospitais.APPHOSP_ANTECEDENTE_USUARIO(ID_USUARIO, DS_ANTECEDENTE_PARAMETRO ,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+values(2,'Pressão Alta', 1, sysdate, null) ;
+
+--------------------------------------------------------------------------------
+-- Carga na tabela hospitais.APPHOSP_CIRURGIA_DATA 
+Insert into hospitais.APPHOSP_CIRURGIA_DATA (ID_CIRURGIA, DATA_REALIZADA, DT_CRIACAO, FL_ATIVO,DT_EXCLUSAO)
+values(1,sysdate,sysdate,1,null); 
+
+Insert into hospitais.APPHOSP_CIRURGIA_DATA (ID_CIRURGIA, DATA_REALIZADA, DT_CRIACAO, FL_ATIVO,DT_EXCLUSAO)
+values(2,sysdate,sysdate,1,null); 
+--------------------------------------------------------------------------------
+-- Carga na tabela hospitais.APPHOSP_ANT_FAMILIAR_USER
+
+Insert into hospitais.APPHOSP_ANT_FAMILIAR_USER(ID_USUARIO,DS_PARENTESCO,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+values(1,'Pai',1,sysdate,null); 
+
+Insert into hospitais.APPHOSP_ANT_FAMILIAR_USER(ID_USUARIO,DS_PARENTESCO,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+values(2,'Mãe',1,sysdate,null); 
+
+--------------------------------------------------------------------------------
+--- Carga na tabela hospitais.APPHOSP_DADOS_MONIT_PARAM_VAL
+Insert into hospitais.APPHOSP_DADOS_MONIT_PARAM_VAL(ID_PARAMETRO,VALOR,DT_CRIACAO)
+values (1,80,sysdate);
+
+Insert into hospitais.APPHOSP_DADOS_MONIT_PARAM_VAL(ID_PARAMETRO,VALOR,DT_CRIACAO)
+values (2,50,sysdate);
+
+--------------------------------------------------------------------------------
+--- Carga na tabela hospitais.APPHOSP_ALERGIA_USUARIO
+
+Insert into hospitais.APPHOSP_ALERGIA_USUARIO(ID_USUARIO,DS_ALERGIA,FL_ATIVO, DT_CRIACAO, DT_EXCLUSAO) 
+values( 1, 'Camarão',1,sysdate, null);
+
+Insert into hospitais.APPHOSP_ALERGIA_USUARIO(ID_USUARIO,DS_ALERGIA,FL_ATIVO, DT_CRIACAO, DT_EXCLUSAO) 
+values( 2, 'Dipirona Sodica',1,sysdate, null) ;
+--------------------------------------------------------------------------------
+--- Carga na tabela hospitais.APPHOSP_NECESSIDADE_ESP_ITEM
+
+Insert into  hospitais.APPHOSP_NECESSIDADE_ESP_ITEM (DS_NECESSIDADE, FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO) 
+values ('Déficit de Fala',1, sysdate, null) ; 
+
+
+Insert into  hospitais.APPHOSP_NECESSIDADE_ESP_ITEM (DS_NECESSIDADE, FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO) 
+values ('Déficit de Visual',1, sysdate, null) ; 
+
+--------------------------------------------------------------------------------
+--- Carga na tabela hospitais.APPHOSP_NECESSIDADE_ESP_USER
+
+Insert into hospitais.APPHOSP_NECESSIDADE_ESP_USER(ID_NECESSIDADE_ESPECIAL,ID_USUARIO,DT_CRIACAO)
+values (1, 1, sysdate);
+
+Insert into hospitais.APPHOSP_NECESSIDADE_ESP_USER(ID_NECESSIDADE_ESPECIAL,ID_USUARIO,DT_CRIACAO)
+values (2, 2, sysdate);
+
+-------------------------------------------------------------------------------
+--- Carga na tabela hospitais.APPHOSP_MEDICAMENTO_DADOS
+
+insert into hospitais.APPHOSP_MEDICAMENTO_DADOS(ID_USUARIO,NM_MEDICAMENTO, FREQUENCIA,
+DOSE,DT_INICIO_MEDICAMENTO, FL_DIARIO, TOTAL_DIAS, INTERVALO_HORA, FL_ESTOQUE, QNT_POR_CAIXA, QNT_CAIXAS,
+TEMPO_ADIAMENTO_ALARME, SOM_ALARME, FL_VIBRACAO_ALARME, FL_TOQUE_ALARME, FL_ATIVO, DT_CRIACAO, DT_EXCLUSAO) 
+values(1,'LOSARTAN',1,'2 Compr',sysdate,1,15,8,1,12,3,10,'Som 1',1,1,1,sysdate,null);
+
+
+insert into hospitais.APPHOSP_MEDICAMENTO_DADOS(ID_USUARIO,NM_MEDICAMENTO, FREQUENCIA,
+DOSE,DT_INICIO_MEDICAMENTO, FL_DIARIO, TOTAL_DIAS, INTERVALO_HORA, FL_ESTOQUE, QNT_POR_CAIXA, QNT_CAIXAS,
+TEMPO_ADIAMENTO_ALARME, SOM_ALARME, FL_VIBRACAO_ALARME, FL_TOQUE_ALARME, FL_ATIVO, DT_CRIACAO, DT_EXCLUSAO) 
+values(1,'INSULINA',1,'0,25 U/kg',sysdate,1,40,6,1,4,5,5,'Som 2',1,1,1,sysdate,null);
+
+-------------------------------------------------------------------------------
+--- Carga na tabela hospitais.APPHOSP_ANTECEDENTE_FAMILIAR 
+
+insert into hospitais.APPHOSP_ANTECEDENTE_FAMILIAR ( ID_ANT_FAMILIAR_USER,DS_ANTECEDENTE,DT_CRIACAO,FL_ATIVO,DT_EXCLUSAO)
+values (1,'Diabetes',sysdate, 1, null ) ;
+
+insert into hospitais.APPHOSP_ANTECEDENTE_FAMILIAR ( ID_ANT_FAMILIAR_USER,DS_ANTECEDENTE,DT_CRIACAO,FL_ATIVO,DT_EXCLUSAO)
+values (2,'Câncer de Pulmão',sysdate, 1, null ) ;
+
+------------------------------------------------------------------------------- 
+--- Carga na tabela hospitais.APPHOSP_HABITO_TABAGISMO
+
+insert into hospitais.APPHOSP_HABITO_TABAGISMO(ID_USUARIO,FL_TABAGISMO, DATA_TABAGISMO ,QNT_CIGARROS,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+values(1,1,sysdate,20,1,sysdate,null);
+
+
+insert into hospitais.APPHOSP_HABITO_TABAGISMO(ID_USUARIO,FL_TABAGISMO, DATA_TABAGISMO ,QNT_CIGARROS,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+values(2,1,sysdate,40,1,sysdate,null);
+
+----------------------------------------------------------------
+--- Carga na tabela hospitais.APPHOSP_HABITO_CONSUMO_BEBIDAS
+
+insert into hospitais.APPHOSP_HABITO_CONSUMO_BEBIDAS(ID_USUARIO,FL_BEBIDA,DS_TIPO_BEBIDA,DS_FREQUENCIA, FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+values (1,1,'Cerveja','2x por Semana',1,sysdate,null);
+
+insert into hospitais.APPHOSP_HABITO_CONSUMO_BEBIDAS(ID_USUARIO,FL_BEBIDA,DS_TIPO_BEBIDA,DS_FREQUENCIA, FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+values (1,1,'Vinho','1x por Semana',1,sysdate,null);
+
+insert into hospitais.APPHOSP_HABITO_CONSUMO_BEBIDAS(ID_USUARIO,FL_BEBIDA,DS_TIPO_BEBIDA,DS_FREQUENCIA, FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+values (1,1,'Vodka','2x por Semana',1,sysdate,null);
+
+--------------------------------------------------------------------------------
+--- Carga na tabela hospitais.APPHOSP_HABITO_ATIV_FISICA
+
+insert into hospitais.APPHOSP_HABITO_ATIV_FISICA(ID_USUARIO ,FL_ATIV_FISICA,DS_TIPO_ATIVIDADE,DS_FREQUENCIA,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+values (1,1,'Musculação','3x por Semana',1,sysdate,null);
+
+insert into hospitais.APPHOSP_HABITO_ATIV_FISICA(ID_USUARIO ,FL_ATIV_FISICA,DS_TIPO_ATIVIDADE,DS_FREQUENCIA,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+values (1,1,'Corrida','2x por Semana',1,sysdate,null);
+
+insert into hospitais.APPHOSP_HABITO_ATIV_FISICA(ID_USUARIO ,FL_ATIV_FISICA,DS_TIPO_ATIVIDADE,DS_FREQUENCIA,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+values (1,1,'Dança','1x por Semana',1,sysdate,null);
+
+
+
+--- Carga na tabela hospitais.APPHOSP_HABITO
+---insert into hospitais.APPHOSP_HABITO ( DS_HABITO, FL_ATIVO, DT_CRIACAO, DT_EXCLUSAO) 
+---values ('Tabagismo', 1,sysdate,null);
+
+---insert into hospitais.APPHOSP_HABITO ( DS_HABITO, FL_ATIVO, DT_CRIACAO, DT_EXCLUSAO) 
+---values ('Consumo de bebidas', 1,sysdate,null);
+
+---insert into hospitais.APPHOSP_HABITO ( DS_HABITO, FL_ATIVO, DT_CRIACAO, DT_EXCLUSAO) 
+---values ('Atividade física', 1,sysdate,null);
+
+------------------------------------------------------------------------------- 
+--- Carga na tabela hospitais.APPHOSP_PARAMETRO_HABITO
+---insert into hospitais.APPHOSP_PARAMETRO_HABITO(DS_DESCRICAO,DS_CAMPO,TIPO_CAMPO,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+---values ('Qual Tipo de Bebida','QUAL_TIPO_BEBIDA','STRING',1,sysdate,null) ;
+
+---insert into hospitais.APPHOSP_PARAMETRO_HABITO(DS_DESCRICAO,DS_CAMPO,TIPO_CAMPO,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+---values ('Informe a Frequencia','FREQUENCIA_CONSUMO_BEBIDA','STRING',1,sysdate,null) ;
+
+---insert into hospitais.APPHOSP_PARAMETRO_HABITO(DS_DESCRICAO,DS_CAMPO,TIPO_CAMPO,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+---values ('Quantos Cigarros Por Dia','CONSUMO_DIARIO_CIGARRO','INT',1,sysdate,null) ;
+
+---insert into hospitais.APPHOSP_PARAMETRO_HABITO(DS_DESCRICAO,DS_CAMPO,TIPO_CAMPO,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+---values ('Há Quanto Tempo','TEMPO_CONSUMO','INT',1,sysdate,null) ;
+
+---insert into hospitais.APPHOSP_PARAMETRO_HABITO(DS_DESCRICAO,DS_CAMPO,TIPO_CAMPO,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+---values ('Atividade','TIPO_ATIVIDADE_FISICA','STRING',1,sysdate,null) ;
+
+---insert into hospitais.APPHOSP_PARAMETRO_HABITO(DS_DESCRICAO,DS_CAMPO,TIPO_CAMPO,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+---values ('Informe a Frequencia','FREQUENCIA_ATIVIDADE_FISICA','STRING',1,sysdate,null) ;
+
+------------------------------------------------------------------------------- 
+--- Carga na tabela hospitais.APPHOSP_HABITO_PARAMETRO;
+
+---insert into hospitais.APPHOSP_HABITO_PARAMETRO(ID_HABITO,ID_PARAMETRO_HABITO) 
+---values (1,3);
+
+---insert into hospitais.APPHOSP_HABITO_PARAMETRO(ID_HABITO,ID_PARAMETRO_HABITO) 
+---values (1,4);
+
+---insert into hospitais.APPHOSP_HABITO_PARAMETRO(ID_HABITO,ID_PARAMETRO_HABITO) 
+---values (2,1);
+
+---insert into hospitais.APPHOSP_HABITO_PARAMETRO(ID_HABITO,ID_PARAMETRO_HABITO) 
+---values (2,2);
+
+---insert into hospitais.APPHOSP_HABITO_PARAMETRO(ID_HABITO,ID_PARAMETRO_HABITO) 
+---values (3,5);
+
+---insert into hospitais.APPHOSP_HABITO_PARAMETRO(ID_HABITO,ID_PARAMETRO_HABITO) 
+---values (3,6);
+
+------------------------------------------------------------------------------- 
+--- Carga na tabela hospitais.APPHOSP_HABITO_VALOR;
+---insert into hospitais.APPHOSP_HABITO_VALOR (ID_HABITO_PARAMETRO,ID_USUARIO,VALOR,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO) 
+---values (1,1,'20',1,sysdate,null);
+
+
+---insert into hospitais.APPHOSP_HABITO_VALOR (ID_HABITO_PARAMETRO,ID_USUARIO,VALOR,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO) 
+---values (2,1,'15',1,sysdate,null);
+
+
+---insert into hospitais.APPHOSP_HABITO_VALOR (ID_HABITO_PARAMETRO,ID_USUARIO,VALOR,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO) 
+---values (3,1,'Cerveja',1,sysdate,null);
+
+
+---insert into hospitais.APPHOSP_HABITO_VALOR (ID_HABITO_PARAMETRO,ID_USUARIO,VALOR,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO) 
+---values (4,1,'2 vezes por semana',1,sysdate,null);
+
+
+---insert into hospitais.APPHOSP_HABITO_VALOR (ID_HABITO_PARAMETRO,ID_USUARIO,VALOR,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO) 
+---values (5,1,'Musculação',1,sysdate,null);
+
+---insert into hospitais.APPHOSP_HABITO_VALOR (ID_HABITO_PARAMETRO,ID_USUARIO,VALOR,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO) 
+---values (6,1,'3 vezes por semana',1,sysdate,null);
+
+------------------------------------------------------------------------------- 
+--- Carga na tabela hospitais.APPHOSP_DADOS_MONITORADOS_PESO;
+insert into hospitais.APPHOSP_DADOS_MONITORADOS_PESO(ID_USUARIO,VALOR,DT_CRIACAO)
+values (1,85,sysdate);
+
+insert into hospitais.APPHOSP_DADOS_MONITORADOS_PESO(ID_USUARIO,VALOR,DT_CRIACAO)
+values (2,80,sysdate);
+
+-------------------------------------------------------
+--- Carga na tabela hospitais.APPHOSP_DADOS_MONIT_ALTURA ;
+
+insert into hospitais.APPHOSP_DADOS_MONIT_ALTURA (ID_USUARIO,VALOR,DT_CRIACAO)
+values (1,185,sysdate);
+
+insert into hospitais.APPHOSP_DADOS_MONIT_ALTURA (ID_USUARIO,VALOR,DT_CRIACAO)
+values (1,182,sysdate);
+
+---corrigir os dados da tabela de parametro de peso ( dados )   
+-------------------------------------------------------
+--- Carga na tabela hospitais.APPHOSP_MEDICAMENTO_HORARIO ;
+insert into hospitais.APPHOSP_MEDICAMENTO_HORARIO(ID_MEDICAMENTO_DADOS,HORARIO,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+values (1,sysdate,1, sysdate,null);
+
+insert into hospitais.APPHOSP_MEDICAMENTO_HORARIO(ID_MEDICAMENTO_DADOS,HORARIO,FL_ATIVO,DT_CRIACAO,DT_EXCLUSAO)
+values (2,sysdate,1, sysdate,null);
+
+-------------------------------------------------------
+--- Carga na tabela hospitais.APPHOSP_MEDICAMENTO_HORARIO ;
+insert into  hospitais.APPHOSP_MEDICAMENTO_HIST_USER(ID_MEDICAMENTO_HORARIO,FL_TOMOU, DT_CRIACAO ) 
+values (1,1,sysdate);
+
+insert into  hospitais.APPHOSP_MEDICAMENTO_HIST_USER(ID_MEDICAMENTO_HORARIO,FL_TOMOU, DT_CRIACAO ) 
+values (2,1,sysdate);
+
+
+
+

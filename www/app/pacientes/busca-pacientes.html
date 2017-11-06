@@ -1,0 +1,35 @@
+<ion-modal-view class="modal" cache-view="false" view-title="Pesquisar Pacientes">
+    <ion-header-bar>
+        <button class="button button-icon button-clear pull-right" ng-click="fecharPesquisa()">Fechar</button>
+
+    </ion-header-bar>
+
+    <ion-content class="especialidades">
+        <div class="padding">            
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Procurar por paciente" ng-model="model.consulta" ng-model-options="{debounce: 1500}">  
+            </label>            
+        </div>
+        
+        <!-- Loading Indicator -->
+        <div class="loading" ng-if="service.carregando">
+            <ion-spinner icon="ripple"></ion-spinner>
+            <p>Carregando pacientes...</p>
+        </div>
+
+        <!-- Empty room message -->
+        <div class="loading" ng-show="service.carregando == false && filtroPacientes.length == 0">
+            <p>Não foram encontrados hospitais próximos ao endereço!</p>
+        </div>     
+
+       
+            <ion-list>
+                <ion-item ng-repeat="paciente in pacientes | orderBy: 'Nome' | filter:filtrar" ng-click="detalharPaciente({{paciente.Id}})">
+                     {{paciente.Nome}}
+				<i class="icon icon-seta_direita"></i>
+                </ion-item>
+            </ion-list>
+     
+    </ion-content>
+</ion-modal-view>

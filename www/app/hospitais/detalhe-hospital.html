@@ -1,0 +1,63 @@
+<ion-view>
+    <ion-nav-bar class="bar-light button">
+        <ion-nav-back-button style="color:#6D2077;" >  
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="hospital-detalhe">
+        <ion-slide-box ng-if="hospital.foto != undefined" auto-play="true" slide-interval="4000" does-continue="true">            
+            <ion-slide ng-repeat="foto in hospital.foto">
+                <div class="item-image image">                    
+                    <img style="height: 225px; width: 100%;" ng-if="foto.foto" back-img="{{foto.foto}}"> <!-- ng-src="data:image/jpeg;base64,{{foto.foto}}" -->
+                </div>
+            </ion-slide>            
+        </ion-slide-box>
+
+        <ion-slide-box ng-show="hospital.foto == undefined">
+            <ion-slide>
+                <div class="item-image image">
+                    <img src="img/img_hospital_generica.jpg">
+                </div>
+            </ion-slide>            
+        </ion-slide-box> 
+
+        <div class="detalhe">
+            <ul>
+                <li ng-class="{'inactive': hospital.telefone[0].DDD == undefined}">
+                    <a class="tab-item" ng-click="telefonarHospital()">
+                        <i class="icon ion-ios-telephone"></i>Ligar
+                    </a>
+                </li>
+                
+                <li ng-class="{'inactive': hospital.coordenadas.latitude == undefined}">
+                    <a class="tab-item" ng-click="tracarRota()" >
+                        <i class="icon ion-map2"></i> Rota
+                    </a>
+                </li>
+
+                <li ng-class="{'inactive': hospital.website == undefined}">
+                    <a class="tab-item" ng-click="abrirSite()">
+                        <i class="icon ion-earth"></i> Site
+                    </a>
+                </li>
+            </ul>
+
+            <h2>{{ hospital.nome }}</h2>
+            <p>
+                {{ hospital.endereco.logradouro }}, {{ hospital.endereco.numero }} 
+                <br />{{ hospital.endereco.bairro }}
+                <br /> {{ hospital.endereco.cidade }} - {{ hospital.endereco.estado }}
+                <br /> 
+                <i class="ion-ios-telephone"></i> ({{ hospital.telefone[0].DDD }}) {{ hospital.telefone[0].numeroTelefone}}                
+            </p>
+            <button class="button tempo-espera-hospital" ng-click="Paciente()">
+                <i class="ion-ios-clock-outline"></i>
+				<!--<i class="iconRelogioDetalhe"></i> -->
+                <span ng-show="hospital.tempoEspera > 0">Tempo de espera {{hospital.tempoEspera}} minutos</span>
+                <span ng-show="hospital.tempoEspera == 0">Tempo indisponível</span>                
+            </button>
+            
+            <p class="padding-top">{{hospital.observacao}}</p>
+            <p class="padding-top">{{configuracao.mensagemInformativo}}</p>
+        </div>
+    </ion-content>
+</ion-view>

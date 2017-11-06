@@ -1,0 +1,36 @@
+<ion-view cache-view="false" view-title="Pacientes">
+   
+   <ion-nav-bar class="custom-color bar-balanced">
+         <ion-nav-back-button>
+         </ion-nav-back-button>		
+         <ion-nav-buttons>
+         </ion-nav-buttons>
+
+         <ion-nav-buttons side="right">
+            <button class="button button-icon button-clear ion-person-add"  ng-click="detalharPaciente()"></button> 
+            <button class="button button-icon button-clear ion-ios-search-strong"  ng-click="abrirPesquisa()"></button>           
+        </ion-nav-buttons>
+   </ion-nav-bar> 
+  
+  
+     <ion-content class="especialidades">
+        <!-- Loading Indicator -->
+        <div class="loading" ng-if="service.carregando">
+            <ion-spinner icon="ripple"></ion-spinner>
+            <p>Carregando Pacientes...</p>
+        </div>
+
+        
+        <div class="loading" ng-show="service.carregando == false && pacientes.length == 0">
+            <p>Não foram encontrados pacientes cadastradas!</p>
+        </div>
+        
+        <ion-list>
+                <ion-item  ng-repeat="paciente in pacientes"  ng-click="detalharPaciente({{paciente.Id}})">
+                  {{paciente.Nome}}
+				<i class="icon icon-seta_direita"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>    
+
+</ion-view>

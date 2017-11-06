@@ -1,0 +1,185 @@
+<ion-view cache-view="true" view-title="Meus Remédios" class="texto-default nesseciesp">
+
+  <ion-nav-bar class="custom-color bar-balanced">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <form name="cadastroMedicamento_form" novalidate>
+    <ion-content>
+      <div class="row">
+        <div class="col col-60"> <h4 class=" necessSubFont">Informe o Medicamento</h4></div>
+        <div class="col col-40">  <h4 class=" necessSubFont">Dose</h4></div>
+      </div>
+      <div class="row">
+        <div class="col col-60 borda-arredondada-medicamentos">
+          <input type="text" ng-model="medicamento.nmMedicamento" name="nomeMedicamento" placeholder="Digite o Medicamento" maxlength="40" required>
+        </div>
+        <div class="col col-40 borda-arredondada-medicamentos">
+          <input type="text" ng-model="medicamento.Dose" name="dose" placeholder="Dose" maxlength="40" required ng-pattern="somenteNumeros">
+          <select ng-model="medicamento.tempoAdiamentoAlarme" name="tempoAdiamentoAlarme" class="select-data">
+            <option value="">Selecione</option>
+            <option value="1">Comprimido</option>
+            <option value="2">Capsula</option>
+            <option value="3">Ampola</option>
+            <option value="4">ML</option>
+            <option value="5">Mg</option>
+            <option value="6">Gotas</option>
+            <option value="7">Outros</option>
+          </select>
+          <span ng-show="cadastroMedicamento_form.dose.$error.pattern">Digite apenas numeros</span>
+        </div>
+      </div>
+      <div class="row">
+        <div id="boxFrequencia" class="borda-arredondada-medicamentos col boxMed">
+          <h4 class="necessSubFont">Frequência</h4>
+          <hr noshade class="hrMedicamentos" />
+          <div class="firtDivbox">
+            <label class="checkbox">
+              <input type="checkbox" ng-model="medicamento.flagDiario" ng-click="controlarEstoque(medicamento.flagDiario)">
+            </label><p class="resetp">Todos os dias</p>
+          </div>
+          <div class="col">
+            <p class="resetp floatleft">Ou a cada quantos dias?</p> <input type="text" ng-model="medicamento.Frequencia" name="frequencia" placeholder="Digite Frequencia" maxlength="2" ng-disabled="disablefrequencia" ng-pattern="somenteNumeros">
+          </div>
+          <div class="col">
+            <p class="resetp floatleft">Iniciar em:</p> <input type="text" ng-model="medicamento.dtInicioMedicamento" name="dtInicioMedicamento" ng-focus="abrirPopupCalendario()" required>
+          </div>
+
+          <div class="col">
+            <p class="resetp floatleft">Durante quantos dias?</p> <input type="text" ng-model="medicamento.totalDias" name="totaldias" placeholder="Digite o Total de Dias" maxlength="3" ng-pattern="somenteNumeros">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="boxhorario" class=" col boxMed">
+          <h4 class="necessSubFont">Horários</h4>
+          <hr noshade class="hrMedicamentos" />
+          <div class="firtDivbox col">
+            <p class="resetp floatleft">Informe o intervalo em horas:</p>
+            <select ng-model="medicamento.intervaloHora" name="intervaloHora" ng-change="adicionarHorario(medicamento.intervaloHora,medicamento.Dose)" class="select-data">
+              <option value="">Selecione</option>
+              <option value="1">1 em 1 hora</option>
+              <option value="2">2 em 2 horas</option>
+              <option value="3">3 em 3 horas</option>
+              <option value="6">6 em 6 horas</option>
+              <option value="5">8 em 8 horas</option>
+              <option value="6">12 em 12 horas</option>
+              <option value="7">1 Vez ao dia </option>
+            </select>
+          </div>
+
+          <div ng-repeat="horario in listaHorarios" class="col .repeathour">
+            <div class="row">
+              <div class="col col-50">
+                {{horario.Horario}}
+
+              </div>
+              <div class="col col-50">
+                Dose: {{horario.Dose}} {{medicamento.tempoAdiamentoAlarme.value}} .
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row" ng-if="medicamento.flagDiario">
+        <div id="boxFrequencia" class="borda-arredondada-medicamentos col boxMed">
+          <div class="row">
+            <div class="col col-80">
+              <h4 class="necessSubFont">Controle de estoque</h4>
+            </div>
+            <div class="col col-20">
+              <label class="toggle" ng-class="tglSelectByWeekClass">
+                <input type="checkbox" ng-model="medicamento.flagEstoque" ng-click="controlarEstoque(medicamento.flagEstoque)">
+                <div class="track">
+                  <div class="handle"></div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <hr noshade class="hrMedicamentos" />
+          <div class="row">
+            <div class="col col-80">
+              <p class="resetp floatleft">Quantidade por caixa:</p>
+            </div>
+            <div class="col col-20">
+              <input class="boxMed" type="text" ng-model="medicamento.qtdePorCaixa" name="qntPorCaixa" maxlength="3" ng-disabled="disableQtdePorCaixas" ng-pattern="somenteNumeros">
+              <span ng-show="cadastroMedicamento_form.qntPorCaixa.$error.pattern">Digite apenas numeros</span>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-80">
+              <p class="resetp floatleft">Quantidade de caixas(s):</p>
+            </div>
+            <div class="col col-20">
+              <input class="boxMed" type="text" ng-model="medicamento.qtdeDeCaixas" name="qntCaixas" maxlength="3" ng-disabled="disableQtdeCaixas" ng-pattern="somenteNumeros">
+              <span ng-show="cadastroMedicamento_form.qntCaixas.$error.pattern">Digite apenas numeros</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="boxhorario" class=" col boxMed">
+          <h4 class="necessSubFont">Configurações</h4>
+          <hr noshade class="hrMedicamentos" />
+          <div class="firtDivbox row">
+            <div class="col-50">
+              <p class="resetp floatleft">Som do alarme</p>
+            </div>
+            <div class="col-50">
+              <input type="text" ng-model="medicamento.somAlarme" placeholder="Escolha o som" maxlength="3">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-80">
+              <h4 class="necessSubFont">Vibração</h4>
+            </div>
+            <div class="col col-20">
+              <label class="toggle" ng-class="tglSelectByWeekClass">
+                <input type="checkbox" ng-model="medicamento.flagVibracaoAlarme" ng-click="ativarVibracaoAlarme(medicamento.flagVibracaoAlarme)">
+                <div class="track">
+                  <div class="handle"></div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-80">
+              <h4 class="necessSubFont"> Toque do alarme</h4>
+            </div>
+            <div class="col col-20">
+              <label class="toggle" ng-class="tglSelectByWeekClass">
+                <input type="checkbox" ng-model="medicamento.flagToqueAlarme" ng-click="ativarToqueAlarme(medicamento.flagToqueAlarme)">
+                <div class="track">
+                  <div class="handle"></div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-50 centralizabotao">
+          <a ng-click="cancelarMedicamento()" id="btnSuspenderCadMed"  class="button button-rodape-metade">Suspender</a>
+        </div>
+        <div class="col col-50 centralizabotao">
+          <a ng-click="adicionarMedicamento()" id="btnConfirmarCadMed"
+             ng-disabled="cadastroMedicamento_form.nomeMedicamento.$error.required||
+                cadastroMedicamento_form.dose.$error.required||
+                cadastroMedicamento_form.dtInicioMedicamento.$error.required"
+             class="button button-rodape-metade">Confirmar</a>
+        </div>
+
+      </div>
+
+
+    </ion-content>
+  </form>
+</ion-view>

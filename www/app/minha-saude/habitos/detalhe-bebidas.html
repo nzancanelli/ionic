@@ -1,0 +1,81 @@
+<ion-view cache-view="true" view-title="Consumo de bebidas" class="texto-default habitos">
+    <ion-nav-bar class="custom-color bar-balanced">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons>
+        </ion-nav-buttons>
+    </ion-nav-bar>    
+  <ion-content>
+    <form name="habitoBebidas_form" novalidate>
+      <div class="item">
+        <div class="divRadius row">
+          <div class="col col-60">
+            <h3>Consome bebida alcoólica?</h3>
+          </div>
+          <div id="idbebidaativa" class="col col-40 borda-arredondada-medicamentos">
+            <select ng-model="habitoConsumoBebida.ConsomeBebida" ng-change="atualizarCampos()" name="fl_bebida" class="select-data" required>
+              <option value="">Selecione</option>
+              <option value="true">Sim</option>
+              <option value="false">Não</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="divRadiusInput row">
+          <div class="col ">
+            <input type="text" name="tipo_bebida" maxlength="40" ng-disabled="habitoConsumoBebida.ConsomeBebida == 'false'" placeholder="Digite o tipo da bebida" ng-model="habitoConsumoBebida.DescricaoBebida" required />
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="divRadiusInput row">
+          <div class="col ">
+            <input type="text" name="frequencia" maxlength="40" ng-disabled="habitoConsumoBebida.ConsomeBebida == 'false'" placeholder="Digite a frequencia" ng-model="habitoConsumoBebida.Frequencia" required />
+          </div>
+        </div>
+      </div>
+      <!--     <div class="list">
+
+        <div class="item item-input sem-linha">
+                  <div class="hold-select">
+
+                      <select  ng-model="habitoConsumoBebida.ConsomeBebida" ng-change="atualizarCampos()" name="fl_bebida" class="select-data" required>
+                            <option value="">Selecione</option>
+                            <option value="true">Sim</option>
+                            <option value="false">Não</option>
+                      </select>
+                      <button  ng-click="adicionarConsumoBebida()" class="icon ion-checkmark-round" ng-disabled="habitoBebidas_form.fl_bebida.$error.required || (habitoConsumoBebida.ConsomeBebida == 'true' &&  (habitoBebidas_form.tipo_bebida.$error.required || habitoBebidas_form.frequencia.$error.required))" />
+
+                  </div>
+
+              </div>
+              <div class="item item-input">
+                   <input type="text" name="tipo_bebida" maxlength="40" ng-disabled="habitoConsumoBebida.ConsomeBebida == 'false'" placeholder="Digite o tipo da bebida" ng-model="habitoConsumoBebida.DescricaoBebida" required/>
+
+              </div>
+              <div class="item item-input">
+                  <input type="text" name="frequencia" maxlength="40" ng-disabled="habitoConsumoBebida.ConsomeBebida == 'false'"  placeholder="Digite a frequencia" ng-model="habitoConsumoBebida.Frequencia" required/>
+              </div>
+          </div>
+      -->
+    </form>
+
+    <!--<div class="bar bar-footer bar-stable">
+        <a ng-click="cancelarConsumoBebida()" class="button button-rodape-metade">CANCELAR</a>
+        <a ng-click="adicionarConsumoBebida()" class="button button-rodape-metade" ng-disabled="habitoBebidas_form.fl_bebida.$error.required || (habitoConsumoBebida.ConsomeBebida == 'true' &&  (habitoBebidas_form.tipo_bebida.$error.required || habitoBebidas_form.frequencia.$error.required))">SALVAR</a>
+    </div>-->
+    <div class="row">
+      <div class="col col-50 centralizabotao">
+        <a ng-click="cancelarConsumoBebida()" id="btnSuspenderCadMed" class="button button-rodape-metade">Suspender</a>
+      </div>
+      <div class="col col-50 centralizabotao">
+        <a ng-click="adicionarConsumoBebida()" id="btnConfirmarCadMed"
+           ng-disabled="habitoBebidas_form.fl_bebida.$error.required || (habitoConsumoBebida.ConsomeBebida == 'true' &&  (habitoBebidas_form.tipo_bebida.$error.required || habitoBebidas_form.frequencia.$error.required))"
+           class="button button-rodape-metade">Confirmar</a>
+      </div>
+    </div>
+  </ion-content>
+
+</ion-view>

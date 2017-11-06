@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <meta http-equiv="Content-Security-Policy" />
+  <title></title>
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/custom-fonts.css" rel="stylesheet">
+  <link href="css/angular-chart.css" rel="stylesheet">
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="css/ionic.app.css" rel="stylesheet">
+  -->
+  <!-- Windows Shim for Ionic compat -->
+  <!-- <script src="winstore-jscompat.js"></script> -->
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+  <!-- google maps -->
+  <!--<script src="http://maps.google.com/maps/api/js?key=AIzaSyCisOHYvfDuO-3Uy-FTVVukkhMtCM80J2U&amp;sensor=true"></script>-->
+  <script src='http://maps.googleapis.com/maps/api/js?sensor=false'></script>
+  <!--   <script src="lib/ionic/js/ionic.bundle.min.js"></script> -->
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+  <!--  <script src="angular-input-masks-standalone.min.js"></script> -->
+  <!-- your app's js -->
+  <script src="lib/jquery-2.1.4.js"></script>
+  <script src="app/appsettings.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/shared/app.module.js"></script>
+  <script src="app/shared/app.controller.js"></script>
+  <script src="app/shared/app.service.js"></script>
+  <script src="app/shared/localStorage.service.js"></script>
+  <script src="app/shared/connectivity-monitor.service.js"></script>
+  <script src="app/shared/navigation.service.js"></script>
+  <!-- principal -->
+  <script src="app/principal/principal.module.js"></script>
+  <script src="app/principal/principal.controller.js"></script>
+  <!-- menu -->
+  <script src="app/menu/menu.module.js"></script>
+  <script src="app/menu/menu.controller.js"></script>
+  <!-- esqueci senha -->
+  <script src="app/esquecisenha/esquecisenha.module.js"></script>
+  <script src="app/esquecisenha/esquecisenha.controller.js"></script>
+  <script src="app/esquecisenha/esquecisenha.service.js"></script>
+  <!-- alterar senha -->
+  <script src="app/alterarsenha/alterarsenha.module.js"></script>
+  <script src="app/alterarsenha/alterarsenha.controller.js"></script>
+  <script src="app/alterarsenha/alterarsenha.service.js"></script>
+  <!-- cadastrar -->
+  <script src="app/cadastrar/cadastrar.module.js"></script>
+  <script src="app/cadastrar/cadastrar.controller.js"></script>
+  <script src="app/cadastrar/cadastrar.service.js"></script>
+
+  <!-- especialidades <-->
+  <script src="app/especialidades/especialidades.module.js"></script>
+  <script src="app/especialidades/especialidades.controller.js"></script>
+  <script src="app/especialidades/especialidades.service.js"></script>
+  <script src="app/especialidades/especialidades-por-unidade.controller.js"></script>
+  <script src="app/especialidades/especialidades-por-unidade.service.js"></script>
+  <!-- especialidades <-->
+  <script src="app/notificacoes/notificacoes.module.js"></script>
+  <script src="app/notificacoes/notificacoes.controller.js"></script>
+  <script src="app/notificacoes/notificacoes.service.js"></script>
+  <!-- hospitais -->
+  <script src="app/hospitais/hospitais.module.js"></script>
+  <script src="app/hospitais/hospitais.controller.js"></script>
+  <script src="app/hospitais/detalhe-hospital.controller.js"></script>
+  <script src="app/hospitais/hospitais.service.js"></script>
+  <script src="app/hospitais/mapa-hospitais.service.js"></script>
+  <script src="app/hospitais/hospitais-busca-geral.controller.js"></script>
+  <script src="app/hospitais/hospitais-busca-geral.service.js"></script>
+  <!-- pacientes -->
+  <script src="app/pacientes/pacientes.module.js"></script>
+  <script src="app/pacientes/pacientes.service.js"></script>
+  <script src="app/pacientes/pacientes.controller.js"></script>
+  <script src="app/pacientes/detalhe-paciente.controller.js"></script>
+  <script src="app/pacientes/finalizar-pretriagem.controller.js"></script>
+  <!-- gps -->
+  <script src="app/gps/gps.service.js"></script>
+  <!-- senha atendimento -->
+  <script src="app/senha-atendimento/senha-atendimento.service.js"></script>
+  <!-- minha saúde -->
+  <script src="app/minha-saude/minha-saude.module.js"></script>
+  <!-- alergias -->
+  <script src="app/minha-saude/alergias/alergias.module.js"></script>
+  <script src="app/minha-saude/alergias/alergias.controller.js"></script>
+  <script src="app/minha-saude/alergias/alergias.service.js"></script>
+  <!--dados monitorados-->
+  <script src="app/minha-saude/dados-monitorados/dados-monitorados.module.js"></script>
+  <script src="app/minha-saude/dados-monitorados/dados-monitorados.controller.js"></script>
+  <script src="app/minha-saude/dados-monitorados/dados-monitorados.service.js"></script>
+  <script src="app/minha-saude/dados-monitorados/graficos-dados-monitorados.service.js"></script>
+
+  <!-- validar cpf -->
+  <script src="dist/angular-relative-date.js"></script>
+  <!--angular-relative-date-->
+  <script src="dist/ValidarCPF.js"></script>
+  <!--habitos-->
+  <script src="app/minha-saude/habitos/habitos.module.js"></script>
+  <script src="app/minha-saude/habitos/habitos.controller.js"></script>
+  <script src="app/minha-saude/habitos/habitos.service.js"></script>
+  <!-- historico de doenças -->
+  <script src="app/minha-saude/historico-de-doencas/historico-de-doencas.module.js"></script>
+  <!--cirurgias realizadas-->
+  <script src="app/minha-saude/historico-de-doencas/cirurgias-realizadas/cirurgias-realizadas.module.js"></script>
+  <script src="app/minha-saude/historico-de-doencas/cirurgias-realizadas/cirurgias-realizadas.controller.js"></script>
+  <script src="app/minha-saude/historico-de-doencas/cirurgias-realizadas/cirurgias-realizadas.service.js"></script>
+  <!-- antecedentes pessoais -->
+  <script src="app/minha-saude/historico-de-doencas/antecedentes-pessoais/antecedentes-pessoais.module.js"></script>
+  <script src="app/minha-saude/historico-de-doencas/antecedentes-pessoais/antecedentes-pessoais.controller.js"></script>
+  <script src="app/minha-saude/historico-de-doencas/antecedentes-pessoais/antecedentes-pessoais.service.js"></script>
+  <!-- antecedentes familiares -->
+  <script src="app/minha-saude/historico-de-doencas/antecedentes-familiares/antecedentes-familiares.module.js"></script>
+  <script src="app/minha-saude/historico-de-doencas/antecedentes-familiares/antecedentes-familiares.controller.js"></script>
+  <script src="app/minha-saude/historico-de-doencas/antecedentes-familiares/antecedentes-familiares.service.js"></script>
+  <!--necessidades especiais-->
+  <script src="app/minha-saude/necessidades-especiais/necessidades-especiais.module.js"></script>
+  <script src="app/minha-saude/necessidades-especiais/necessidades-especiais.controller.js"></script>
+  <script src="app/minha-saude/necessidades-especiais/necessidades-especiais.service.js"></script>
+  <!--Medicamentos-->
+  <script src="app/medicamentos/medicamento-em-uso/medicamentos.module.js"></script>
+  <script src="app/medicamentos/medicamento-em-uso/medicamentos.controller.js"></script>
+  <script src="app/medicamentos/medicamento-em-uso/medicamentos.service.js"></script>
+  <!--Historico-->
+  <script src="app/medicamentos/historico/historico-medicamento.controller.js"></script>
+  <script src="app/medicamentos/historico/historico-medicamento.module.js"></script>
+  <script src="app/medicamentos/historico/historico-medicamento.service.js"></script>
+  <!--Alarme-->
+  <script src="app/medicamentos/alarme/alarme-medicamento.controller.js"></script>
+  <script src="app/medicamentos/alarme/alarme-medicamento.module.js"></script>
+  <script src="app/medicamentos/alarme/alarme-medicamento.service.js"></script>
+  <!--Cadastro/Edicao Medicamentos-->
+  <script src="app/medicamentos/cadastro-medicamento/cadastro-medicamentos.module.js"></script>
+  <script src="app/medicamentos/cadastro-medicamento/cadastro-medicamentos.controller.js"></script>
+  <script src="app/medicamentos/cadastro-medicamento/cadastro-medicamentos.service.js"></script>
+  <script src="app/medicamentos/cadastro-medicamento/editar-medicamentos.controller.js"></script>
+
+  <!--angular-chart-->
+  <script src="dist/Chart.min.js"></script>
+  <script src="dist/angular-chart.min.js"></script>
+  <!-- date picker-->
+  <script src="lib/ionic-datepicker/dist/ionic-datepicker.bundle.min.js"></script>
+</head>
+<body ng-app="app_hospitais" onload="onLoad()">
+  <ion-nav-view></ion-nav-view>
+</body>
+</html>

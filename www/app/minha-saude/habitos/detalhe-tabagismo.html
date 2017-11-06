@@ -1,0 +1,114 @@
+<ion-view cache-view="false" view-title="Tabagista" class="texto-default habitos">
+
+  <ion-nav-bar class="custom-color bar-balanced">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content>
+    <form name="tabagismo_form" novalidate>
+
+      <form name="habitoAtivFisica_form" novalidate>
+        <div class="item">
+          <div class="divRadius row">
+            <div class="col col-60">
+              <h3>É Fumante?</h3>
+            </div>
+            <div id="idbebidaativa" class="col col-40 borda-arredondada-medicamentos">
+              <select ng-model="habitoTabagismo.Fumante" ng-change="atualizarCampos()" name="tabagista" class="select-data" required>
+                <option value="">Selecione</option>
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="divRadius row">
+            <div class="col ">
+              <h3>Há Quanto Tempo?</h3>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="item">
+            <div class="divRadius row">
+                <div class="col col-90">
+                        <select  ng-model="habitoTabagismo.Fumante"  ng-change="atualizarCampos()" name="tabagista" class="select-data"  required>
+                                <option value="">Selecione</option>
+                                 <option value="true">Sim</option>
+                                <option value="false">Não</option>
+                          </select>
+                </div>
+                <div class="col col-10">
+                    <a  ng-click="adicionarTabagismo()" ng-disabled="tabagismo_form.tabagista.$error.required || (habitoTabagismo.Fumante == 'true' && (!tabagismo_form.valorData.$valid || tabagismo_form.tempoData.$error.required || tabagismo_form.qnt_cigarros.$error.required))"  class="icon ion-edit"></a>
+                </div>
+            </div>
+        </div>-->
+        <div class="item">
+          <div class="divRadius row">
+            <div class="col col-10-invert">
+              <input type="text" class="alerta" name="valorData" ng-model="habitoTabagismo.valorData" ng-disabled="habitoTabagismo.Fumante == 'false'" placeholder="0" minlength="1" maxlength="3" allow-only-numbers required />
+            </div>
+            <div class="col col-90-invert">
+              <select ng-model="habitoTabagismo.tempoData" ng-disabled="habitoTabagismo.Fumante == 'false'" name="tempoData" class="select-data" ng-options="opcao.value as opcao.label for opcao in opcoesData" required>
+                <option value="">Selecione</option>
+              </select>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="divRadius row">
+            <div class="col">
+              <h3>Quantos cigarros por dia?</h3>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="divRadiusInput row">
+            <div class="col ">
+              <input type="text" name="qnt_cigarros" ng-disabled="habitoTabagismo.Fumante == 'false'" ng-model="habitoTabagismo.QuantidadeDiaria" placeholder="Digite a quantidade" maxlength="5" allow-only-numbers required />
+            </div>
+          </div>
+        </div>
+
+
+      </form>
+
+      <div class="row">
+        <div class="col col-50 centralizabotao">
+          <a ng-click="cancelarTabagismo()" id="btnSuspenderCadMed" class="button button-rodape-metade">Suspender</a>
+        </div>
+        <div class="col col-50 centralizabotao">
+          <a ng-click="adicionarTabagismo()" id="btnConfirmarCadMed"
+             ng-disabled="tabagismo_form.tabagista.$error.required || (habitoTabagismo.Fumante == 'true' && (!tabagismo_form.valorData.$valid || tabagismo_form.tempoData.$error.required || tabagismo_form.qnt_cigarros.$error.required))"
+             class="button button-rodape-metade">Confirmar</a>
+        </div>
+      </div>
+  </ion-content>
+</ion-view>
+<!--  <div class="list">
+
+       <div class="item item-input">
+
+                 <span class="input-label"> HÁ QUANTO TEMPO?</span>
+
+     </div>
+     <div class="item item-input sem-linha">
+         <div class="hold-number hold-number-margem">
+             <input type="text" name="valorData" ng-model="habitoTabagismo.valorData" ng-disabled="habitoTabagismo.Fumante == 'false'" placeholder="0" minlength="1" maxlength="3" allow-only-numbers required/>
+         </div>
+         <div class="hold-select">
+
+
+         </div>
+     </div>-->
+<!-- <div class="item item-input">
+            <span class="input-label">QUANTOS CIGARROS POR DIA?</span>
+            <input type="text" name="qnt_cigarros" ng-disabled="habitoTabagismo.Fumante == 'false'" ng-model="habitoTabagismo.QuantidadeDiaria" placeholder="Digite a quantidade" maxlength="5" allow-only-numbers required/>
+
+</div>-->

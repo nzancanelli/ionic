@@ -1,0 +1,53 @@
+<ion-view cache-view="false" view-title="Histórico {{valoresParametro.DescricaoParametro}}" class="historico">
+    <ion-nav-bar class="custom-color bar-balanced" id="nav-bar">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-header-bar class="bar-subheader no-padding conteudoFixo" id="conteudo-fixo">
+        <div class="button-bar padding ">
+            <a class="button" href="#/menu/minha-saude/dados-monitorados/periodo-dados-monitorados/{{valoresParametro.IdParametro}}"
+                ng-class="{'active': predicado == 'periodo'}">Período</a>
+            <a class="button" ng-click="mudarFiltro('dia')" ng-class="{'active': predicado == 'dia'}">Dia</a>
+            <a class="button" ng-click="mudarFiltro('semana')" ng-class="{'active': predicado == 'semana'}">Semana</a>
+            <a class="button" ng-click="mudarFiltro('mes')" ng-class="{'active': predicado == 'mes'}">Mês</a>
+            <a class="button" ng-click="mudarFiltro('ano')" ng-class="{'active': predicado == 'ano'}">Ano</a>
+        </div>
+        <div class="chartWrapper padding" ng-if="data.length > 0">
+            <ion-scroll direction="x" class="wide-as-needed" ng-touch="mouseoverWideDiv()" on-release="mouseleaveWideDiv()">
+                <div class="chartAreaWrapper">
+                   <!-- <canvas id="myChart" class="chart chart-bar" chart-data="data" chart-dataset-override="datasetOverride"
+                        chart-labels="labels">
+                    </canvas>-->
+                    <canvas id="bar-chart" width="800" height="400"></canvas>
+                </div>
+            </ion-scroll>
+        </div>
+    </ion-header-bar>
+    <ion-content class="texto-default applyFooter conteudoNormal">
+        <ion-list>
+            <ion-item ng-repeat="valor in valoresParametro.Valores" class="no-padding item item-remove-animate item-icon-right">
+
+                <div class="data">
+                    <div class="dia">
+                        {{valor.DataCriacao | date:'dd/MM/yyyy'}}
+                    </div>
+                    <div class="hora">
+                        {{valor.DataCriacao | date:'HH:mm:ss'}}
+                    </div>
+                </div>
+                <div class="valor">{{valor.Valor}}</div>
+                <ion-option-button class="button delete-button icon-left" ng-click="removerValores(valor.Id)">
+                    <i class="icon ion-trash-b"></i></ion-option-button>
+                <i class="icon icon-seta_direita"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+    <div class="texto-default">
+        <div class="bar bar-footer bar-stable">
+            <a href="#/menu/minha-saude/dados-monitorados/valor-dados-monitorados/{{valoresParametro.IdParametro}}" class="button button-rodape-full">ADICIONAR</a>
+        </div>
+    </div>
+</ion-view>

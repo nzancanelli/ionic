@@ -1,0 +1,28 @@
+<ion-view cache-view="false" view-title="Dados Monitorados" class="texto-default">
+
+    <ion-nav-bar class="custom-color bar-balanced">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <form name="parametro_form" novalidate>
+        <ion-content>
+            <div class="item item-divider">
+                <h2>Informe o parâmetro</h2>
+            </div>
+            <div class="list card">
+               <div class="item item-input">
+                    <label class="item item-input item-stacked-label">
+                         <span class="input-label">PARÂMETRO</span>     
+                             <input type="text" ng-model="parametro.DescricaoParametro" placeholder="Digite o parâmetro" name="parametro" required>
+                         </label>
+                </div>
+            </div>
+        </ion-content>
+    </form>
+    <div class="bar bar-footer bar-stable">
+        <a ng-click="cancelarParametro()" class="button button-rodape-metade">CANCELAR</a>
+        <a ng-click="adicionarParametro()" class="button button-rodape-metade" ng-disabled="parametro_form.parametro.$error.required">SALVAR</a>
+    </div>
+</ion-view>

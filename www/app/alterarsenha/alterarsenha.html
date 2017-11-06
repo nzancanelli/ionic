@@ -1,0 +1,55 @@
+<ion-view cache-view="true" view-title="Alterar Senha">
+
+    <ion-nav-bar class="custom-color bar-balanced">
+        <ion-nav-buttons>
+        </ion-nav-buttons>
+		</ion-nav-bar> 
+
+ 
+  <ion-content class="padding">
+
+      <form name="cadastrar">
+    
+      <div class="vertical-align">
+        <img class="logo1" />
+       </div>
+     
+      <div class="list list-inset">
+                 
+          <label class="item item-input item-stacked-label">
+              <input type="password" placeholder="Senha Antiga" ng-model="usuario.senhaantiga" name="senhaantiga" required  pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\W+)(?=^.{8,50}$).*$|(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=^.{8,50}$).*$|(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W+)(?=^.{8,50}$).*$|(?=.*[a-z])(?=.*[0-9])(?=.*\W+)(?=^.{8,50}$).*$">
+              <span class="validacao" ng-show="cadastrar.senhaantiga.$touched && cadastrar.senhaantiga.$error.required">campo é obrigatório</span> 
+              <span class="validacao" ng-show= "cadastrar.senhaantiga.$touched &&  !cadastrar.senhaantiga.$error.required && cadastrar.senhaantiga.$invalid">Senha deve ter 8 caracteres 5 letras e 3 numeros</span>             
+          </label>
+          
+          <label class="item item-input item-stacked-label">
+               <input type="password" placeholder="Senha Nova" ng-model="usuario.senhanova" name="senhanova" required  pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\W+)(?=^.{8,50}$).*$|(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=^.{8,50}$).*$|(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W+)(?=^.{8,50}$).*$|(?=.*[a-z])(?=.*[0-9])(?=.*\W+)(?=^.{8,50}$).*$">
+               <span class="validacao" ng-show= "cadastrar.senhanova.$touched &&  !cadastrar.senhanova.$error.required && cadastrar.senhanova.$invalid">Senha deve ter 8 caracteres 5 letras e 3 numeros</span>
+          </label>
+
+          <label class="item item-input item-stacked-label">
+               <input type="password" placeholder="Confirme a senha" ng-model="usuario.confirmarsenha" name="confirm"  required compare-to="usuario.senhanova" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\W+)(?=^.{8,50}$).*$|(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=^.{8,50}$).*$|(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W+)(?=^.{8,50}$).*$|(?=.*[a-z])(?=.*[0-9])(?=.*\W+)(?=^.{8,50}$).*$">
+               <span class="validacao" ng-show="cadastrar.confirm.$touched  && contato.confirm.$pristine && cadastrar.confirm.$error.required">
+                   confirmação de  senha é obrigatório
+               </span>
+               <span class="validacao" ng-show= "cadastrar.confirm.$touched && contato.confirm.$pristine && !cadastrar.confirm.$error.required && cadastrar.confirm.$invalid">
+                   Senha deve ter 8 caracteres 5 letras e 3 numeros
+               </span>
+               <span class="validacao"  ng-show=" cadastrar.confirm.$touched && !contato.confirm.$pristine && cadastrar.confirm.$error.compareTo">
+                   Senha e confirmação não conferem!  
+               </span>   
+          </label>        
+      </div>
+      
+      <div class="cadastrar1">
+         <span> 
+          <button class="button  button-positive " ng-click="cancelar()">Cancelar</button>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         
+          <button class="button  button-positive" ng-disabled="cadastrar.$invalid" ng-click="alterar()">&nbsp;&nbsp;Gravar&nbsp;&nbsp;  </button>
+         <span>
+      <div>   
+           
+    </form>      
+    </ion-content>
+</ion-view>

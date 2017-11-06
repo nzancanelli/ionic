@@ -1,0 +1,51 @@
+
+<ion-view cache-view="false" class=main>
+         
+  <ion-content class="padding" >
+    <form name="login">
+      <div class="vertical-align">
+        <img class="logo1"/>
+        <h1 class=labelLogin>Login</h1>
+      </div>
+     
+      <div class="list list-inset">                 
+          <label class="item item-input item-stacked-label">
+               <input type="text" placeholder="Cpf ou Email" ng-model="usuario.email" name="email" required valida-cpf="usuario.email">                                    
+               <span class="validacao" ng-show="login.email.$touched && login.email.$error.required">Email é obrigatório</span>
+               <span class="validacao" ng-show= "login.email.$touched && !login.email.$error.required && login.email.$error.validaCpf">Formato é inválido</span>   
+                     
+          </label>                                           
+               
+          <label class="item item-input item-stacked-label">
+              <input type="password" placeholder="Senha" ng-model="usuario.senha" name="senha" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\W+)(?=^.{8,50}$).*$|(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=^.{8,50}$).*$|(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W+)(?=^.{8,50}$).*$">
+               <span class="validacao" ng-show= "login.senha.$touched && login.senha.$error.required">senha obrigatoria</span>
+              <span class="validacao" ng-show= "login.senha.$touched && !login.senha.$error.required && login.senha.$invalid">senha invalida</span>
+          </label>
+         
+      </div>
+                 
+
+        <div class="cadastrar"> 
+         <button class="button  button-block button-login" ng-click="autenticar()" ng-disabled="login.$invalid">Entrar</button>
+        </div>        
+
+             
+      <div class="esqueceu">  
+        <a href="#/esquecisenha">Esqueci minha senha</a>
+      </div>
+     
+    <div class="cadastrar"> 
+        <p> Não sou cadastrado</p> 
+        <button class="button button-block button-positive" ng-click="cadastrar()">Cadastra-se</button>
+    </div>  
+
+     <div class="esqueceu"> 
+         <a  href="#"  ng-click="verificarlogado()">Entrar sem login</a>
+         <!--  <a href="#/menu/principal">Entrar sem login</a>  -->         
+     </div>
+   
+     </form>
+    
+    </ion-content>
+</ion-view>  
+  

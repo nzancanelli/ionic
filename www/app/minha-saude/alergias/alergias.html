@@ -1,0 +1,38 @@
+<ion-view cache-view="false" view-title="Alergias" class="texto-default alergias">
+
+  <ion-nav-bar class="custom-color bar-balanced">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content class="applyFooter">
+    <!-- Loading Indicator -->
+    <div class="loading" ng-if="service.carregando">
+      <ion-spinner icon="ripple"></ion-spinner>
+      <p>Carregando...</p>
+    </div>
+    <!--  <div class="item item-divider sem-fundo">
+          <h2>Cadastre suas alergias</h2>
+          <a href="#/menu/minha-saude/alergias/adicionar" class="button button-adicionar">ADICIONAR</a>
+      </div>-->
+    <div class="row">
+      <div class="col">
+        <ion-list id="idListAlergias">
+          <ion-item ng-repeat="alergia in alergias | orderBy:'DescricaoAlergia'" href="#/menu/minha-saude/alergias/editar/{{alergia}}"
+                    class="item-remove-animate item-icon-right">
+            <p class="resetp">{{ alergia.NomeAlergia}}</p>
+            <ion-option-button class="button delete-button icon-left" ng-click="removerAlergia(alergia.Id)"><i class="icon ion-trash-b"></i></ion-option-button>
+            <i class="icon ion-edit"></i>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+
+    <div id="footerAlergias" class="bar bar-footer bar-luz">
+      <a class="button pull-right iconAddAlergias" href="#/menu/minha-saude/alergias/adicionar">
+        <img id="btnFooterAlergia" class="iconAddAlergias button pull-right" />
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

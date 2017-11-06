@@ -1,0 +1,60 @@
+<ion-view cache-view="false" view-title="Cadastre-se">
+
+   <!-- <ion-nav-bar class="custom-color bar-balanced">
+        <ion-nav-back-button>
+       </ion-nav-back-button>		
+        <ion-nav-buttons>
+		</ion-nav-bar> -->
+
+ 
+  <ion-content class="cadastrar">
+
+      <form name="cadastrar">
+    
+      <div class="vertical-align">
+        <img class="logo1" />
+       </div>
+     
+      <div class="list list-inset">
+                 
+          <label class="item item-input item-stacked-label">
+              <input type="text" placeholder="Nome" ng-model="usuario.nome"  name=nome required>
+              <span class="validacao" ng-show="cadastrar.nome.$touched && cadastrar.nome.$error.required">Nome do usuário  é obrigatório</span>
+          </label>
+          <label class="item item-input item-stacked-label">
+               <input type="text" placeholder="Cpf" ng-model="usuario.cpf" name ="cpf" required valida-cpf="usuario.cpf"
+                 pattern="^([0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}|[0-9]{2}\.?[0-9]{3}\.?[0-9]{3}\/?[0-9]{4}\-?[0-9]{2})$">   
+               <span class="validacao" ng-show="cadastrar.cpf.$touched  && cadastrar.cpf.$error.required">Cpf é obrigatório</span>
+               <span class="validacao" ng-show= "cadastrar.cpf.$touched && !cadastrar.cpf.required && cadastrar.cpf.$error.validaCpf">Cpf é inválido</span> 
+          </label>
+          <label class="item item-input item-stacked-label">
+               <input type="email" placeholder="E-mail" ng-model="usuario.email" name ="email" required>                   
+               <span class="validacao" ng-show="cadastrar.email.$touched && cadastrar.email.$error.required">Email é obrigatório</span>
+               <span class="validacao" ng-show= "cadastrar.email.$touched && cadastrar.email.$error.email">Formato do e-mail é inválido</span> 
+          </label>
+
+          <label class="item item-input item-stacked-label">
+               <input type="email" placeholder="Repita o email"  name="confirm" ng-model="usuario.repitaEmail" required compare-to="usuario.email">               
+               <span class="validacao" ng-show="cadastrar.confirm.$touched && cadastrar.confirm.$error.required">Email é obrigatório</span>
+               <span class="validacao" ng-show= "cadastrar.confirm.$touched && !cadastrar.confirm.$error.required && cadastrar.confirm.$error.email">Formato do e-mail é inválido</span> 
+               <span class="validacao" ng-show="cadastrar.confirm.$touched && !cadastrar.confirm.$error.email && !cadastrar.confirm.$error.required  
+                   && cadastrar.confirm.$error.compareTo">  
+                 email e confirmação não conferem!  
+               </span>   
+          </label>        
+      </div>
+     
+
+      <div class="cadastrar1">
+         <span> 
+          <button class="button  button-positive " ng-click="cancelar()">Cancelar</button>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         
+          <button class="button  button-positive"  ng-disabled="cadastrar.$invalid" ng-click="gravar()">&nbsp;&nbsp;Gravar&nbsp;&nbsp;  </button>
+         <span>
+      <div>   
+
+           
+    </form>      
+    </ion-content>
+</ion-view>

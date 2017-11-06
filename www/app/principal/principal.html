@@ -1,0 +1,59 @@
+<ion-view cache-view="true" view-title="Tempo Espera">
+  <div class="informative" ng-class="{'inactive': falhaComunicacao == true}">
+    <a href="#" ng-click="mostrarInformativo()">
+      <i class="ion-ios-information"></i>
+    </a>
+  </div>
+  <div class="share" ng-class="{'inactive': falhaComunicacao == true}">
+    <a href="#" ng-click="compartilhar()">
+      <i class="ion-android-share-alt"></i>
+    </a>
+  </div>
+  <div class="notification">
+    <a href="#" ng-click="mostrarNotificacoes()">
+      <i class="ion-ios-bell"></i>
+    </a>
+  </div>
+  <div class="qrcode">
+    <a href="#" ng-click="qrcode()">
+      <i class="ion-ios-barcode"></i>
+    </a>
+  </div>
+
+  <div class="vertical-align">
+    <img class="logo" />
+
+    <div class="msgPrezadoClientes">
+      <span class="lblEspecialidades">Prezado Paciente, verifique aqui o <strong>tempo de espera</strong> nos nossos Prontos-Socorros por especialidade</span>
+    </div>
+
+    <div class="row">
+      <div class="col ">
+        <div class="btnHome" ng-click="visualizarEspecialidades()">
+          <img class="iconPrincipalEspecialiade" />
+          <p>Especialidades</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="btnHome" ng-click="visualizarHospitais()">
+          <img class="iconPrincipalMeusRemedios" />
+          <p>Hospitais</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="btnHome" ng-click="visualizarMeusRemedios()">
+          <img class="iconPrincipalEspecialiade" />
+          <p>Meus Remédios</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="btnHome" ng-click="visualizarMinhaSaude()">
+          <img class="iconPrincipalMinhaSaude" />
+          <p> Minha Saúde</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-view>

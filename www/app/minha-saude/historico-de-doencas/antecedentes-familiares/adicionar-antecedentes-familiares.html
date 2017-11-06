@@ -1,0 +1,76 @@
+<ion-view cache-view="false" view-title="Histórico de doenças" class="texto-default histoDoencas">
+
+  <ion-nav-bar class="custom-color bar-balanced">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content class="applyFooter">
+    <div class="tituloHistoDoencas">
+      <h3>Insira o histórico de doenças de seus famliares</h3>
+    </div>
+    <form id="addhistForm" name="ant_familiar_form" novalidate>
+      <div class="row">
+        <div class="col col-80 col-offset-10 borda-arredondada-medicamentos">
+          <input type="text" name="parentesco" maxlength="40" ng-model="antecedenteF.DescricaoParentesco" placeholder="Digite grau parentesco" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-60 col-offset-10 borda-arredondada-medicamentos ">
+          <input id="idValorData" type="text" maxlength="40" ng-model="antecedente.Descricao" name="antecedente" placeholder="Digite a doença" required>
+        </div>
+        <div class="col ">
+          <a id="btnAddListCirur"  ng-click="adicionarLista()" class="button button-plus icon ion-plus-round" ng-disabled="ant_familiar_form.antecedente.$pristine"></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <ion-list id="idListAntecedentes" ng-if="antecedenteF.AntecedentesFamiliares.length > 0">
+            <ion-item class=" item-remove-animate item-icon-right" ng-repeat="item in antecedenteF.AntecedentesFamiliares">
+              <p class="resetp">{{ item.Descricao }}</p>
+              <ion-option-button class="button delete-button icon-left" ng-click="removerAntecedente(item)">
+                <i class="icon ion-trash-b"></i>
+              </ion-option-button>
+            </ion-item>
+          </ion-list>
+        </div>
+      </div>
+    </form>
+    <div class="row">
+      <div class="col col-50 centralizabotao">
+        <a ng-click="cancelarAntecedenteF()" id="btnSuspenderCadMed" class="button button-rodape-metade">Suspender</a>
+      </div>
+      <div class="col col-50 centralizabotao">
+        <a ng-click="adicionarAntecedenteF()" id="btnConfirmarCadMed"
+           ng-disabled="antecedenteF.DescricaoParentesco == null  || antecedenteF.AntecedentesFamiliares.length === 0"
+           class="button button-rodape-metade">Confirmar</a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+<!--<div class="list" scroll="false">
+         <div class="item item-input">
+                     <input type="text" name="parentesco" maxlength="40" ng-model="antecedenteF.DescricaoParentesco" placeholder="Digite o parentesco" required>
+                     <button  ng-click="adicionarAntecedenteF()" class="icon ion-checkmark-round" ng-disabled="ant_pessoal_form.antedecente.$error.required" />
+
+         </div>
+         <div class="item item-input">
+             <div>
+                     <input type="text" maxlength="40" ng-model="antecedente.Descricao" name="antecedente" placeholder="Digite o antecedente" required>
+                         </div>
+             <div>
+                 <a ng-click="adicionarLista()" class="button button-plus icon ion-plus-round" ng-disabled="ant_familiar_form.antecedente.$pristine"></a>
+             </div>
+         </div>
+         <ion-list ng-if="antecedenteF.AntecedentesFamiliares.length > 0">
+             <ion-item class="item item-input item-remove-animate item-icon-right" ng-repeat="item in antecedenteF.AntecedentesFamiliares">
+                 <h3>{{item.Descricao}}</h3>
+                 <ion-option-button class="button delete-button icon-left" ng-click="removerAntecedente(item)"><i class="icon ion-trash-b"></i></ion-option-button>
+             </ion-item>
+         </ion-list>
+     </div>-->
+<!--    <div class="bar bar-footer bar-stable">
+         <a ng-click="cancelarAntecedenteF()" class="button button-rodape-metade">CANCELAR</a>
+         <a ng-click="adicionarAntecedenteF()" class="button button-rodape-metade" ng-disabled="antecedenteF.DescricaoParentesco == null  || antecedenteF.AntecedentesFamiliares.length === 0">SALVAR</a>
+     </div>-->

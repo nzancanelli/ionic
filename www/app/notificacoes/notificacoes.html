@@ -1,0 +1,34 @@
+<ion-view cache-view="true" view-title="Notificações">
+  <ion-nav-bar class="custom-color bar-balanced">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content class="notificacoes">
+    <div class="loading" ng-if="service.carregando">
+      <ion-spinner icon="ripple"></ion-spinner>
+      <p>Carregando notificacoes...</p>
+    </div>
+    <div class="loading" ng-show="service.carregando == false && notificacoes.length == 0">
+      <p>Não foram encontrados notificacoes cadastradas!</p>
+    </div>
+    <div ng-repeat="notificacao in notificacoes" class="card" ng-disabled="salvaOk" ng_click="senhaAtendimento()">
+      <!--<div class="item item-divider">
+        <div class="titulo-esquerda">
+          <h2>{{notificacao.date}} às {{notificacao.hour}}</h2>
+        </div>
+      </div>-->
+      <div class="item item-icon-right">
+        <p><h2>{{notificacao.Menssagem}}</h2></p>
+        <!--<p><h2>{{notificacao.hospital}}</h2></p>
+          <p>{{notificacao.paciente}}</p>
+          <p>Especialidade: {{notificacao.especialidade}}</p>
+          <br />
+          <p>Senha de atendimento: <strong>{{notificacao.numeroSenhaAtendimento}}</strong></p>
+          <p></p>
+          <p>Senha de pré-triagem: <strong>{{notificacao.numeroPreTriagem}}</strong></p>-->
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,42 @@
+<ion-view cache-view="false" view-title="Alarme Medicamentos" class="texto-default nesseciesp">
+
+    <ion-nav-bar class="custom-color bar-balanced">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+   
+   <form name="alarmeMedicamento_form">
+
+     <ion-header-bar class="bar-subheader no-padding">
+        <div class="padding aviso">
+                <p>Alerta  08:00 
+                <br />Está na hora de tomar o seu remédio.</p>               
+        </div>       
+    </ion-header-bar>
+   
+    <ion-content>
+        <div class="list list-inset">            
+        </div> 
+        
+        <div ng-repeat="historico in listaHorariosHistorico">
+         
+          <ion-item>            
+              {{historico.DataHistorico}}            
+          </ion-item>
+           
+           <ion-item ng-repeat="item in historico.Horarios" >
+              {{item.Horario}}
+           </ion-item>
+
+        </div>               
+
+    </ion-content>   
+    
+     <div class="bar bar-footer bar-stable">            
+             <a ng-click="naoTomarMedicamento()"  class="button button-rodape-metade">Não tomar</a>                
+             <a ng-click="tomarMedicamento()" class="button button-rodape-metade">Tomar</a>                   
+    </div>       
+   </form>  
+</ion-view>

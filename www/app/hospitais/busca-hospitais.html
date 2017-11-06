@@ -1,0 +1,51 @@
+<ion-modal-view class="modal" cache-view="false" view-title="Pesquisar Hospitais">
+    <ion-header-bar>
+        <button class="button button-icon button-clear pull-right" ng-click="fecharPesquisa()">Fechar</button>
+
+    </ion-header-bar>
+
+    <ion-content class="hospitais">
+        <div class="padding">            
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Procurar por Hospital, End. ou Cidade" ng-model="model.consulta" ng-model-options="{debounce: 1500}">                
+            </label>            
+        </div>
+        
+        <!-- Loading Indicator -->
+        <div class="loading" ng-if="service.carregando">
+            <ion-spinner icon="ripple"></ion-spinner>
+            <p>Carregando hospitais...</p>
+        </div>
+
+        <!-- Empty room message -->
+        <div class="loading" ng-show="service.carregando == false && filtroHospitais.length == 0">
+            <p>Não foram encontrados hospitais próximos ao endereço!</p>
+        </div>        
+
+        <!-- <div class="list"> -->
+            <ion-list>
+                <ion-item ng-repeat="hospital in hospitais | filter:filtrar" ng-click="detalharHospital({{hospital.identificador}})"  class="no-padding item item-icon-right">
+                    <div class="tempo-espera">
+                            <!-- <i class="ion-ios-clock-outline"></i> -->
+                          <i class="iconRelogio"></i>
+                            <h4>Espera</h4>
+                            <span ng-show="hospital.tempoEspera > 0" > {{ hospital.tempoEspera }} min</span>
+                            <span ng-show="hospital.tempoEspera == 0"> Indisp</span>
+                            <!-- Tempo espera indisponível -->
+                        </div>
+                        <div class="buscadescricao-hospital">
+                            <h3>{{ hospital.nome }}</h3>
+                            <p>
+                                <span ng-show="hospital.distancia != undefined && hospital.distancia < 500" > Você está a {{hospital.distancia }} km </span>
+                                <span ng-show="hospital.distancia == undefined || hospital.distancia == 0"> Distância indisponível</span>
+                                <span ng-show="hospital.distancia > 500">Distância indisponível</span>
+                            </p>
+                        </div>
+
+                        <i class="icon icon-seta_direita"></i>
+                </ion-item>
+            </ion-list>
+       <!--  </div> -->
+    </ion-content>
+</ion-modal-view>

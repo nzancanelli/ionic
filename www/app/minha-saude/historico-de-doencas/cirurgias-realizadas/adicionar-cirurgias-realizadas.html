@@ -1,0 +1,119 @@
+<ion-view cache-view="true" view-title="Cirurgias Realizadas" class="texto-default histoDoencas">
+
+  <ion-nav-bar class="custom-color bar-balanced">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content class="applyFooter">
+    <div class="tituloHistoDoencas">
+      <h3>Insira as cirurgias realizadas</h3>
+    </div>
+    <form id="addhistForm" name="cirurgias_form" novalidate>
+      <div class="row">
+        <div class="col col-80 col-offset-10 borda-arredondada-medicamentos">
+          <input type="text" maxlength="40" name="cirurgia" ng-model="cirurgia.DescricaoCirurgia" placeholder="Digite a Cirurgia" required />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-offset-10">
+          <p id="idLabel" class="resetp">Há quanto tempo? </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-10 col-offset-10 borda-arredondada-medicamentos ">
+          <input id="idValorData" type="text" class="input-numero" name="valorData" placeholder="0" ng-model="cirurgiaData.valorData" minlength="1"
+                 maxlength="3" allow-only-numbers required />
+        </div>
+        <div id="divtemporizador" class="col-60">
+          <select id="idtemporizador" ng-model="cirurgiaData.tempoData" name="tempoData" class="select-data" ng-options="opcao.value as opcao.label for opcao in opcoesData" required>
+            <option value="">Selecione</option>
+          </select>
+        </div>
+        <div class="col ">
+          <a id="btnAddListCirur" ng-click="adicionarLista()" class="button button-plus icon ion-plus-round" ng-disabled="!cirurgias_form.valorData.$valid || cirurgias_form.tempoData.$error.required"></a>
+        </div>
+      </div>
+      <!--   <div class="row">
+       <div class="col col-80 col-offset-10 borda-arredondada-medicamentos hold-plus">
+         <a ng-click="adicionarLista()" class="button button-plus icon ion-plus-round" ng-disabled="!cirurgias_form.valorData.$valid || cirurgias_form.tempoData.$error.required"></a>
+       </div>
+     </div>
+      -->
+
+      <div class="row">
+        <div class="col">
+          <ion-list id="idListAntecedentes" ng-if="cirurgia.Datas.length > 0">
+            <ion-item class=" item-remove-animate item-icon-right" ng-repeat="item in cirurgia.Datas">
+              <p class="resetp">{{ item.DataRealizada | relativeDate }}</p>
+              <ion-option-button class="button delete-button icon-left" ng-click="removerCirurgiaItem(item)">
+                <i class="icon ion-trash-b"></i>
+              </ion-option-button>
+            </ion-item>
+          </ion-list>
+        </div>
+      </div>
+
+      <!--
+
+      <div class="row">
+        <div class="col">
+          <ion-list id="idListAlergias">
+            <ion-item ng-repeat="alergia in alergias | orderBy:'DescricaoAlergia'" href="#/menu/minha-saude/alergias/editar/{{alergia}}"
+                      class="item-remove-animate item-icon-right">
+              <p class="resetp">{{ alergia.NomeAlergia}}</p>
+              <ion-option-button class="button delete-button icon-left" ng-click="removerAlergia(alergia.Id)"><i class="icon ion-trash-b"></i></ion-option-button>
+              <i class="icon ion-edit"></i>
+            </ion-item>
+          </ion-list>
+        </div>
+      </div>
+          -->
+      <!--
+        <div class="list">
+          <div class="item item-input">
+
+
+            <button ng-click="adicionarCirurgia()" class="icon ion-checkmark-round" ng-disabled="ant_pessoal_form.antedecente.$error.required" />
+
+          </div>
+          <div class="item item-input">
+
+            <span class="input-label"> HÁ QUANTO TEMPO?</span>
+          </div>
+          <div class="item item-input sem-linha">
+            <div class="hold-number">
+              <input type="text" class="input-numero" name="valorData" placeholder="0" ng-model="cirurgiaData.valorData" minlength="1"
+                     maxlength="3" allow-only-numbers required />
+            </div>
+            <div class="hold-select">
+
+              <select ng-model="cirurgiaData.tempoData" name="tempoData" class="select-data" ng-options="opcao.value as opcao.label for opcao in opcoesData" required>
+                <option value="">Selecione</option>
+              </select>
+            </div>
+            <div class="hold-plus">
+              <a ng-click="adicionarLista()" class="button button-plus icon ion-plus-round" ng-disabled="!cirurgias_form.valorData.$valid || cirurgias_form.tempoData.$error.required"></a>
+            </div>
+          </div>
+
+
+        </div>-->
+    </form>
+    <div class="row">
+      <div class="col col-50 centralizabotao">
+        <a ng-click="cancelarCirurgia()" id="btnSuspenderCadMed" class="button button-rodape-metade">Suspender</a>
+      </div>
+      <div class="col col-50 centralizabotao">
+        <a ng-click="adicionarCirurgia()" id="btnConfirmarCadMed"
+           ng-disabled="cirurgia.DescricaoCirurgia == null  || listaCirurgiaDatas.length === 0"
+           class="button button-rodape-metade">Confirmar</a>
+      </div>
+    </div>
+  </ion-content>
+  <!-- <div class="bar bar-footer bar-stable">
+       <a ng-click="cancelarCirurgia()" class="button button-rodape-metade">CANCELAR</a>
+       <a ng-click="adicionarCirurgia()" class="button button-rodape-metade" ng-disabled="cirurgia.DescricaoCirurgia == null  || listaCirurgiaDatas.length === 0">SALVAR</a>
+   </div>-->
+</ion-view>

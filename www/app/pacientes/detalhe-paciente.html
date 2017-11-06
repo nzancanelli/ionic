@@ -1,0 +1,120 @@
+<ion-view cache-view="false" view-title="Pacientes">
+
+      <form name="detalhe">
+   
+   <ion-nav-bar class="custom-color bar-balanced">
+      <ion-nav-back-button>
+      </ion-nav-back-button>		
+      <ion-nav-buttons side="right">
+            <button class="button button-icon button-clear ion-android-checkmark-circle" ng-disabled="detalhe.$invalid"  ng-click="salvarPaciente()"></button>
+            <button class="button button-icon button-clear ion-trash-a"  ng-click="excluirPaciente()"></button>
+       </ion-nav-buttons>
+     
+	</ion-nav-bar> 
+
+      <form name="detalhe">
+  
+            <ion-content class="paciente padding"> 
+     <!--    <ion-content class="descricao-hospital"> -->
+                        
+     
+
+        <!-- Loading Indicator -->
+        <div class="loading" ng-if="service.carregando">
+            <ion-spinner icon="ripple"></ion-spinner>
+            <p>Carregando Pacientes...</p>
+        </div>
+
+        <div class="list">
+
+           <!-- <label class="item item-input item-stacked-label"> -->
+
+                <label class = "item item-input item-select item-light">
+                   <!--<div class = "input-label">
+                       Convênio
+                   </div> -->
+
+                
+                
+                <!--<span class="input-label">Convênio</span> -->
+                 
+                <span class="input-label">Convênio</span>
+              <!--  <div class="input">  -->                  
+                    <select class="select-data ng-pristine ng-valid ng-touched" 
+                        ng-change="VerificarConvenio(convenio.Id)"
+                        ng-model="convenio.Id" 
+                        ng-options="convenio.Id as convenio.Nome for convenio in convenios">
+                    </select>
+              <!--  </div> -->
+
+                  </label>
+               
+            
+           
+
+            <label ng-if="mostrarMatricula == true" class="item item-input item-stacked-label">
+               <span class="input-label">Número da matrícula</span>
+                <input  type="text" placeholder="Matricula" maxlength="50" name="numeroMatricula" ng-model="paciente.NumeroMatricula" required >
+                <span class="validacao" ng-show="detalhe.numeroMatricula.$touched  && detalhe.numeroMatricula.$error.required">Numero de Matricula é obrigatório</span>
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Data de Nascimento</span>
+
+            <input type="date" ng-blur="VerificandoMatricula()" placeholder="Data de Nascimento" 
+                 ng-model="DataNascimento.Correta">
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Nome</span> 
+                <input type="text" placeholder="Nome" name="nome" maxlength="100" ng-model="paciente.Nome"required >
+                <span class="validacao" ng-show="detalhe.nome.$touched  && detalhe.nome.$error.required">Nome é obrigatório</span>
+            </label>
+
+            <label class="item item-input item-stacked-label">
+             <span class="input-label">CPF</span> 
+            <input type="text" placeholder="CPF" maxlength="11"  ng-model="paciente.CPF" name="cpf" required valida-cpf="paciente.CPF">   
+               <span class="validacao" ng-show="detalhe.cpf.$touched  && detalhe.cpf.$error.required">Cpf é obrigatório</span>
+               <span class="validacao" ng-show="detalhe.cpf.$touched && !detalhe.cpf.required && detalhe.cpf.$error.validaCpf">Cpf é inválido</span>
+            </label>
+           
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Telefone</span>
+                <input 
+                    type="text" 
+                    name="telefone"
+                    placeholder="telefone" 
+                    maxlength="11"  
+                    ng-model="paciente.Telefone"
+                    required
+                    onchange="salvaOk = false"
+                    pattern="^\(?\d{2}\)?[\s-]?[\s9]?\d{4}-?\d{4}$">
+                    <span class="validacao" ng-show="detalhe.telefone.$touched && detalhe.telefone.$invalid">Telefone é inválido</span>
+            </label>
+
+        </div>
+
+       
+
+    </form>  
+
+
+    
+     
+    </ion-content>
+
+
+  <!--  <ion-footer-bar align-title="left"> -->
+
+       <div class="button-app" >
+      
+      <button class="button"   ng-click="preferencial()" ng-disabled="salvaOk" ><i class="iconeFooter ion-android-walk"></i>Fazer Pré-Triagem
+         </button>
+    </div>
+      
+    
+ <!-- </ion-footer-bar> -->
+
+    </form> 
+           
+</ion-view>

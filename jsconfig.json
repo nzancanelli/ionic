@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "checkJs": true
+  },
+  "include": [
+    "www/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*"
+  ]
+}

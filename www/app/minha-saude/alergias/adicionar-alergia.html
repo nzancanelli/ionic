@@ -1,0 +1,32 @@
+<ion-view cache-view="true" view-title="Alergias" class="texto-default alergias">
+  <ion-nav-bar class="custom-color bar-balanced">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content>
+    <form id="addAlergiaForm" name="alergia_form" novalidate>
+      <div class="row">        
+        <div class="col col-80 col-offset-10 borda-arredondada-medicamentos">
+          <input type="text" ng-model="alergia.NomeAlergia" name="alergia" placeholder="Digite a alergia" maxlength="40" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-80  col-offset-10 borda-arredondada-medicamentos">
+          <input type="text" ng-model="alergia.DescricaoAlergia" name="alergia" placeholder="Descrição ou anotação" maxlength="40">
+        </div>
+      </div>
+    </form>
+    <div class="row">
+      <div class="col col-50 centralizabotao">
+        <a ng-click="cancelarAlergia()" id="btnSuspenderCadMed" class="button button-rodape-metade">Suspender</a>
+      </div>
+      <div class="col col-50 centralizabotao">
+        <a ng-click="adicionarAlergia()" id="btnConfirmarCadMed"
+           ng-disabled="alergia_form.alergia.$error.required"
+           class="button button-rodape-metade">Confirmar</a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

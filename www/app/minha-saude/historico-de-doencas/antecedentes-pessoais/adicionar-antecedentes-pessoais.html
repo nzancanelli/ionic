@@ -1,0 +1,39 @@
+<ion-view cache-view="false" view-title="Historico Pessoal" class="texto-default histoDoencas">
+  <ion-nav-bar class="custom-color bar-balanced">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content>
+    <form id="addhistForm" name="ant_pessoal_form" novalidate>
+      <div class="row">
+        <div class="col col-80 col-offset-10 borda-arredondada-medicamentos">
+          <input type="text" maxlength="40" ng-model="antecedenteP.DescricaoAntecedenteParametro" placeholder="Digite o antecedente" name="antedecente" required>
+        </div>
+      </div>
+    </form>
+    <div class="row">
+      <div class="col col-50 centralizabotao">
+        <a ng-click="cancelarAntecedenteP()" id="btnSuspenderCadMed" class="button button-rodape-metade">Suspender</a>
+      </div>
+      <div class="col col-50 centralizabotao">
+        <a ng-click="adicionarAntecedenteP()" id="btnConfirmarCadMed"
+           ng-disabled="ant_pessoal_form.antedecente.$error.required"
+           class="button button-rodape-metade">Confirmar</a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+<!-- <ion-content>
+     <div class="list">
+         <div class="item item-input">
+             <input type="text" maxlength="40" ng-model="antecedenteP.DescricaoAntecedenteParametro" placeholder="Digite o antecedente" name="antedecente" required>
+             <button  ng-click="adicionarAntecedenteP()" class="icon ion-checkmark-round" ng-disabled="ant_pessoal_form.antedecente.$error.required" />
+         </div>
+     </div>
+ </ion-content>-->
+<!-- <div class="bar bar-footer bar-stable">
+         <a ng-click="cancelarAntecedenteP()" class="button button-rodape-metade">CANCELAR</a>
+         <a ng-click="adicionarAntecedenteP()" class="button button-rodape-metade" ng-disabled="ant_pessoal_form.antedecente.$error.required">SALVAR</a>
+     </div>-->

@@ -1,0 +1,34 @@
+<ion-view cache-view="true" view-title="Dados Monitorados" class="texto-default">
+
+    <ion-nav-bar class="custom-color bar-balanced">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <form name="periodo_form" novalidate>
+        <ion-content>
+            <div class="item item-divider">
+                <h2>Informe o período</h2>
+            </div>
+            <div class="list card">
+                <div class="item item-input">
+                    <label class="item item-input item-stacked-label">
+                           <span class="input-label">DE:</span>           
+                           <input type="text" ng-model="periodo.de" placeholder="__/__/____" name="de" ng-focus="abrirPopupCalendarioDe()" required>                               
+                         </label>
+                </div>
+                <div class="item item-input">
+                    <label class="item item-input item-stacked-label">
+                           <span class="input-label">ATÉ:</span>        
+                           <input type="text" ng-model="periodo.ate" placeholder="__/__/____" name="ate" ng-focus="abrirPopupCalendarioAte()" required>                               
+                         </label>
+                </div>
+            </div>
+        </ion-content>
+    </form>
+    <div class="bar bar-footer bar-stable">
+        <a ng-click="cancelarPeriodo()" class="button button-rodape-metade">CANCELAR</a>
+        <a ng-click="adicionarPeriodo()" class="button button-rodape-metade" ng-disabled="periodo_form.de.$error.required || periodo_form.ate.$error.required">SALVAR</a>
+    </div>
+</ion-view>

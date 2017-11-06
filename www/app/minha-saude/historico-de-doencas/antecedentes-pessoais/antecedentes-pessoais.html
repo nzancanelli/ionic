@@ -1,0 +1,40 @@
+<ion-view cache-view="false" view-title="Histórico de doenças" class="texto-default histoDoencas">
+
+  <ion-nav-bar class="custom-color bar-balanced">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content class="applyFooter">
+    <div class="tituloHistoDoencas">
+      <h3>Histórico Pessoal</h3>
+    </div>
+    <!--. <p class="text-center" ng-if="antecedentesP.length == 0">
+         Informe às doenças que você tem ou que já teve que possam ser relevantes para manter no seu histórico.
+     </p>-->
+    <div class="row">
+      <div class="col">
+        <ion-list id="idListAntecedentes">
+          <ion-item ng-repeat="antecedente in antecedentesP | orderBy:'DescricaoAntecedenteParametro'" href="#/menu/minha-saude/historico-de-doencas/antecedentes-pessoais/editar-antecedentes-pessoais/{{antecedente}}"
+                    class="no-padding item item-remove-animate item-icon-right">
+
+            <p class="resetp"> {{ antecedente.DescricaoAntecedenteParametro}}</p>
+            <ion-option-button class="button delete-button icon-left" ng-click="removerAntecedenteP(antecedente.Id)"><i class="icon ion-trash-b"></i></ion-option-button>
+            <i class="icon ion-edit"></i>
+
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </ion-content>
+  <!--  <div class="bar bar-footer bar-stable">
+        <a href="#/menu/minha-saude/historico-de-doencas/antecedentes-pessoais/adicionar-antecedentes-pessoais" class="button button-rodape-full">ADICIONAR</a>
+    </div>-->
+
+  <div id="footerAlergias" class="bar bar-footer bar-luz">
+    <a class="button pull-right iconAddAlergias" href="#/menu/minha-saude/historico-de-doencas/antecedentes-pessoais/adicionar-antecedentes-pessoais">
+      <img id="btnFooterAlergia" class="iconAddAlergias button pull-right" />
+    </a>
+  </div>
+</ion-view>

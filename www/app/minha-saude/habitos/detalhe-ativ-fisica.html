@@ -1,0 +1,67 @@
+<ion-view cache-view="false" view-title="Atividade Física" class="texto-default habitos">
+
+  <ion-nav-bar class="custom-color bar-balanced">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content>
+    <form name="habitoAtivFisica_form" novalidate>
+      <div class="item">
+        <div class="divRadius row">
+          <div class="col col-60">
+            <h3>Pratica atividade física?</h3>
+          </div>
+          <div id="idbebidaativa" class="col col-40 borda-arredondada-medicamentos">
+            <select ng-model="habitoAtvFisica.RealizaAtividadeFisica" ng-change="atualizarCampos()" name="fl_ativ_fisica" class="select-data" required>
+              <option value="">Selecione</option>
+              <option value="true">Sim</option>
+              <option value="false">Não</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      
+      <div class="item">
+        <div class="divRadiusInput row">
+          <div class="col ">
+            <input type="text" name="atividade" maxlength="40" placeholder="Digite a atividade" ng-disabled="habitoAtvFisica.RealizaAtividadeFisica == 'false'" ng-model="habitoAtvFisica.DescricaoAtividadeFisica" required />
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="divRadiusInput row">
+          <div class="col">
+            <input type="text" name="frequencia" maxlength="40" placeholder="Digite a frequencia" ng-disabled="habitoAtvFisica.RealizaAtividadeFisica == 'false'" ng-model="habitoAtvFisica.Frequencia" required />
+          </div>
+        </div>
+      </div>
+
+
+    </form>
+    <!--<div class="bar bar-footer bar-stable">
+        <a ng-click="cancelarAtivFisica()" class="button button-rodape-metade">CANCELAR</a>
+        <a ng-click="adicionarAtivFisica()" class="button button-rodape-metade" ng-disabled="habitoAtivFisica_form.fl_ativ_fisica.$error.required || (habitoAtvFisica.FL_ATIV_FISICA == 'true' &&  (habitoAtivFisica_form.atividade.$error.required || habitoAtivFisica_form.frequencia.$error.required))">SALVAR</a>
+    </div>-->
+
+    <div class="row">
+      <div class="col col-50 centralizabotao">
+        <a ng-click="cancelarAtivFisica()" id="btnSuspenderCadMed" class="button button-rodape-metade">Suspender</a>
+      </div>
+      <div class="col col-50 centralizabotao">
+        <a ng-click="adicionarAtivFisica()" id="btnConfirmarCadMed"
+        ng-disabled="habitoAtivFisica_form.fl_ativ_fisica.$error.required || (habitoAtvFisica.FL_ATIV_FISICA == 'true' &&  (habitoAtivFisica_form.atividade.$error.required || habitoAtivFisica_form.frequencia.$error.required))"
+        class="button button-rodape-metade">Confirmar</a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

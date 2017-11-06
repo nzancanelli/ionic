@@ -1,0 +1,115 @@
+<ion-view cache-view="false" view-title="Dados monitorados" class="texto-default dados-monitorados">
+
+    <ion-nav-bar class="custom-color bar-balanced">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content >
+            <div class = "row">  
+                <div class = "col ">
+                    <div class="divBoxDados"  >
+                        <div class="divBoxTitle">  
+                            <a href="#/menu/minha-saude/dados-monitorados/historico/PESO" ><h3>{{dadosFixos.peso==null?0:dadosFixos.peso}} Kg</h3></a> 
+                        </div>
+                        <div class="divBoxSubj">Peso</div>                     
+                    </div>       
+                    <div class="divBoxDados" >
+                        <div  class="divBoxTitle">                         
+                            <a href=""><h3>70bpm</h3></a>
+                        </div>
+                        <div class="divBoxSubj">Batimento cardíaco</div>         
+                    </div>      
+                    <div class="divBoxDados" >
+                        <div  class="divBoxTitle">                         
+                            <a href="">  <h3>98%</h3></a> 
+                        </div>
+                        <div class="divBoxSubj">Sp02</div>
+                    </div>      
+                    <div class="divBoxDados" >
+                        <div  class="divBoxTitle">                         
+                            <a href="#/menu/minha-saude/dados-monitorados/historico/ALTURA">  <h3>{{dadosFixos.altura}} Cm</h3></a>
+                        </div>
+                        <div class="divBoxSubj">Altura</div>
+                    </div>    
+                    <div class="divBoxDados" >
+                        <div  class="divBoxTitle">
+                          <a href=""><h3>{{dadosFixos.PressaoValorSistolica}}/{{dadosFixos.PressaoValorDiastolica}}</h3></a> 
+                        </div>
+                        <div class="divBoxSubTitle">mmHg</div> 
+                        <div class="divBoxSubj">Pressão sanquínea</div>                  
+                    </div>      
+                    <div class="divBoxDados" >
+                        <div  class="divBoxTitle">
+                            <a href=""><h3>100</h3></a>    
+                        </div>
+                        <div  class="divBoxSubTitle">mg/dl</div> 
+                        <div class="divBoxSubj">Glicose</div>         
+                    </div>      
+                                     
+                </div>
+            </div>
+<!--
+
+        <ion-list>
+            <ion-item href="#/menu/minha-saude/dados-monitorados/historico/PESO" class="no-padding item item-remove-animate item-icon-right">
+                <div class="dados-monitorados">
+                    <div class="titulo">
+                        <h2>Peso:</h2>
+                    </div>
+                    <div class="conteudo">
+                        <h3 ng-if="dadosFixos.peso != null">{{dadosFixos.peso}} Kg</h3>
+                    </div>
+                </div>
+                <i class="icon icon-seta_direita"></i>
+            </ion-item>
+            <ion-item href="#/menu/minha-saude/dados-monitorados/historico/ALTURA" class="no-padding item item-remove-animate item-icon-right">
+                <div class="dados-monitorados">
+                    <div class="titulo">
+                        <h2>Altura:</h2>
+                    </div>
+                    <div class="conteudo">
+                        <h3 ng-if="dadosFixos.altura != null">{{dadosFixos.altura}} Cm</h3>
+                    </div>
+                </div>
+                <i class="icon icon-seta_direita"></i>
+            </ion-item>
+            <ion-item class="item">
+                <div class="dados-monitorados">
+                    <div class="titulo">
+                        <h2>IMC:</h2>
+                    </div>
+                    <div class="conteudo">
+                        <h3 >
+                            {{calcularIMC() | number:2}} - {{textoIMC()}}</h3>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item ng-repeat="parametro in parametros | orderBy:'DescricaoParametro'" href="#/menu/minha-saude/dados-monitorados/historico/{{parametro.IdParametro}}"
+                class="no-padding item item-remove-animate item-icon-right">
+                <div class="dados-monitorados">
+                    <div class="titulo">
+                        <h2>{{ parametro.DescricaoParametro}}:</h2>
+                    </div>
+                    <div class="conteudo">
+                        <h3>{{parametro.Valor}}</h3>
+                    </div>
+                </div>
+                <ion-option-button class="button delete-button icon-left" ng-click="removerParametro(parametro.IdParametro)">
+                    <i class="icon ion-trash-b"></i>
+                    </ion-option-button>
+                <i class="icon icon-seta_direita"></i>
+            </ion-item>
+        </ion-list>-->
+    </ion-content>
+
+    <div id="footerAlergias" class="bar bar-footer bar-luz">
+            <a class="button pull-right iconAddAlergias" href="#/menu/minha-saude/dados-monitorados/parametro" >
+                   <img id="btnFooterAlergia" class="iconAddAlergias button pull-right" />                    
+            </a>    
+       </div>
+   <!-- <div class="bar bar-footer bar-stable">
+        <a href="#/menu/minha-saude/dados-monitorados/parametro" class="button button-rodape-full">ADICIONAR PARÂMETRO</a>
+    </div>-->
+</ion-view>

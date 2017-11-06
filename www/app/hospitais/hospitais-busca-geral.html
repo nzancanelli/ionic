@@ -1,0 +1,49 @@
+<ion-view cache-view="true" view-title="Hospitais" class="hospitais">
+  <ion-nav-bar class="custom-color bar-balanced">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons side="right">
+      <button class="button button-icon button-clear ion-map" ng-hide="exibirMapa" ng-click="mostrarMapa()"></button>
+      <button class="button button-icon button-clear ion-navicon-round" ng-show="exibirMapa" ng-click="esconderMapa()"></button>
+      <button class="button button-icon button-clear ion-ios-search-strong" ng-hide="exibirMapa" ng-click="abrirPesquisa()"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-header-bar class="bar-subheader no-padding" ng-hide="exibirMapa">
+    <div class="padding aviso">
+      <p>
+        Atenção! Verifique quais prontos-socorros
+        <br />estão disponíveis em seu plano de saúde.
+      </p>
+    </div>
+    <div class="button-bar padding">      
+      <a class="button" ng-click="mudarOrdenacao('nome')" ng-class="{'active': predicado == 'nome'}">A-Z</a>
+      <a class="button" ng-click="mudarOrdenacao('distancia')" ng-class="{'active': predicado == 'distancia'}">Distância</a>
+    </div>
+  </ion-header-bar>
+
+  <ion-content class=" has-header has-subheader">
+    <div ng-hide="exibirMapa">
+      <div class="loading" ng-if="service.carregando">
+        <ion-spinner icon="ripple"></ion-spinner>
+        <p>Carregando hospitais...</p>
+      </div>
+      <div class="loading" ng-show="service.carregando == false && hospitais.length == 0">
+        <p>Não foram encontrados hospitais!</p>
+      </div>
+      <ion-list>
+        <ion-item ng-repeat="hospital in hospitais | orderBy:ordenar" href="#/menu/especialidades-por-unidade/{{hospital.identificador}}" class="no-padding item item-icon-right">        
+          <div class="descricao-hospital">
+            <h3>{{ hospital.nome | lowercase }}</h3>
+            <p>
+              <span ng-show="hospital.distancia != undefined"> Você está a {{ hospital.distancia }} km </span>
+              <span ng-show="hospital.distancia == undefined || hospital.distancia == 0"> Distância indisponível</span>
+            </p>
+          </div>
+          <i class="icon icon-seta_direita"></i>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div id="map" class="scroll" ng-show="exibirMapa" data-tap-disabled="true">
+    </div>
+  </ion-content>
+</ion-view>

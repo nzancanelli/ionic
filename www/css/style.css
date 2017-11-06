@@ -1,0 +1,2159 @@
+* {
+  font-family: 'Hind-Light';
+}
+
+@media (min-width: 858px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 780px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 702px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 724px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 623px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+.logo {
+  content: url("../img/icon_americas.png");
+  margin: auto;
+  max-width: 300px;
+  width: auto;
+  display: block;
+  /*padding-top: 100px;*/
+  margin-top: 10%;
+}
+
+.ion-android-walk {
+  max-width: 40px !important;
+  width: 5.5px !important;
+  margin-top: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: left !important;
+}
+
+.icon_walk {
+  content: url("../img/icon_walk.png");
+  max-width: 30px;
+  width: 1.5px;
+  margin-top: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.ion-android-walk {
+  font-size: 25px !important;
+}
+
+
+.right-buttons button {
+  font-size: 14px !important;
+}
+
+
+
+.icon_pacientes {
+  content: url("../img/icon_pacientes.png");
+  max-width: 20px;
+  width: 1.5px;
+  margin-top: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.icon_alterarsenha {
+  content: url("../img/icon_alterarsenha.png");
+  margin: auto;
+  max-width: 20px;
+  width: 1.5px;
+  margin-top: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.icon_sair {
+  content: url("../img/icon_sair.png");
+  margin: auto;
+  max-width: 20px;
+  width: 1.5px;
+  margin-top: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.menu_items {
+  align-items: left;
+}
+
+.icon_usuario {
+  content: url("../img/usuario.jpg");
+  margin: auto;
+  max-width: 20px;
+  width: 1.5px;
+  margin-top: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.padding {
+  overflow: hidden;
+}
+
+
+.logo1 {
+  content: url("../img/icon_americas.png");
+  margin: auto;
+  max-width: 200px;
+  width: auto;
+  display: block;
+  /*padding-top: 100px;*/
+  margin-top: 2.5%;
+}
+
+.logo2 {
+  content: url("../img/icon_americas.png");
+  margin: auto;
+  max-width: 100px;
+  width: auto;
+  display: block;
+  /*padding-top: 100px;*/
+  margin-top: 2.5%;
+}
+
+
+
+.preferencial {
+  background-image: url("../img/icon_preferencial.png");
+  width: auto;
+  margin: auto;
+  display: block;
+}
+
+  .preferencial .button {
+    width: 100px !important;
+    border: 2px solid #fff !important;
+    margin: 400px 25px 0 35px;
+    background-color: #00448b !important;
+  }
+
+
+
+.iconRelogio {
+  content: url("../img/icon_relogio.png");
+  max-width: 30px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.iconRelogioDetalhe {
+  content: url("../img/icon_relogio_Detalhe.png");
+  max-width: 40px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* GERAL */
+
+.transparent {
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.title {
+  color: #20B6CE;
+  text-transform: uppercase;
+}
+
+
+/* TELA PRINCIPAL */
+
+ion-view.main {
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hospital.jpg");*/
+  background-color: #fff;
+  background-size: cover;
+  width: auto;
+  height: 100%;
+}
+
+ion-view h1 {
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.perfil1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/perfil.jpg");
+  min-height: 120px;
+}
+
+.usuariologado {
+  color: white;
+}
+
+.alerta {
+  text-align: center;
+}
+
+.centralizar {
+  text-align: center;
+}
+
+.custom, .custom .list .item {
+  background-color: white !important;
+  border: none;
+  border-top: 1px solid;
+  border-bottom: 2px solid;
+  border-color: #666;
+  color: black !important;
+  text-align: left;
+}
+
+  .custom h3 {
+    color: black !important;
+    font-size: 0.5px;
+  }
+
+.button-login {
+  bottom: 100%;
+  color: white;
+  background-color: #6D2077;
+  text-align: center;
+  left: 2px;
+  right: 10px;
+}
+
+.button-app {
+  position: absolute;
+  top: 500px;
+  bottom: 30%;
+  text-align: center;
+  left: 10px;
+  right: 10px;
+}
+
+  .button-app i {
+    float: right;
+  }
+
+  .button-app a {
+    text-transform: uppercase;
+  }
+
+  .button-app b {
+    font-size: 30% !important;
+    color: white;
+  }
+
+
+
+.button-app1 {
+  position: absolute;
+  top: 500px;
+  bottom: 30%;
+  text-align: center;
+  left: 10px;
+  right: 10px;
+  color: white !important;
+}
+
+  .button-app1 a {
+    color: white !important;
+    font-size: 120% !important;
+  }
+
+.button-app2 {
+  position: absolute;
+  top: 523px;
+  bottom: 30%;
+  text-align: center;
+  left: 10px;
+  right: 10px;
+  color: white !important;
+}
+
+  .button-app2 a {
+    color: white !important;
+    font-size: 120% !important;
+  }
+
+
+.informative,
+.share {
+  position: absolute;
+  bottom: 20px;
+  font-size: 2em;
+  /*40px;*/
+}
+
+.notification,
+.share {
+  position: absolute;
+  bottom: 20px;
+  font-size: 2em;
+  /*40px;*/
+}
+
+.esqueceu {
+  width: 100%;
+  padding: 2px;
+  text-align: center;
+}
+
+.cadastrar {
+  width: 100%;
+  padding: 2px;
+  text-align: left;
+}
+
+.validacao {
+  color: #6D2077;
+  width: 100%;
+  font-size: 0.9em;
+  text-align: left;
+}
+
+.cadastrar1 {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  left: 0;
+  right: 30px;
+}
+
+.iconEspecialidades {
+  content: url("../img/icon_especialidades.png");
+  margin: auto;
+  max-width: 90px;
+  width: auto;
+  display: block;
+  padding-top: 80px; /*Alterar para 20px para casos sem borda*/
+}
+
+
+.msgPrezadoClientes {
+  margin: auto;
+  max-width: 195px; /*Ajustar Texto no span*/
+  width: auto;
+  display: block;
+  padding-top: 5%;
+  color: #6D2077;
+  text-align: center;
+  font-style: normal;
+  font-size: 105%;
+}
+
+.btnTempoEspera {
+  margin: auto;
+  margin-top: 10%;
+  display: block;
+  height: 65px;
+  width: 250px;
+  -webkit-border-radius: 50px;
+  border-radius: 20px;
+  background: linear-gradient(to right, #6D2077, #842563);
+  padding-top: 25px;
+}
+
+  .btnTempoEspera span {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 2px;
+    /*vertical-align: text-bottom;*/
+    font-weight: bold;
+    font-size: 135%;
+    margin: auto;
+    width: auto;
+    display: block;
+    /*background: #6D2077;*/
+    /*position: absolute;*/
+    /*bottom: 50;*/
+    color: #fff;
+  }
+
+.iconEstetoscopio {
+  content: url("../img/icon_especialidades_old.png");
+  margin-top: -15px;
+  vertical-align: middle;
+  /*width:30px; height:30px;*/
+  max-width: 45px;
+}
+
+.btnHome {
+  width: 140px;
+  height: 120px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.4em;
+  color: #6d2077;
+  font-weight: bold;
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+
+  .btnHome p {
+    margin-top: 10%;
+  }
+
+.FotoPerfilcircle {
+  border-radius: 10%;
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #84bd00;
+}
+
+  .FotoPerfilcircle img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+#headdpiture {
+  margin-top: 10px;
+}
+
+#MinhaSaudeHomeIdade p {
+  text-align: center;
+  color: #6d2077 !important;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding-top: 0 !important;
+}
+
+#headdpiture p {
+  margin-top: 1%;
+  color: #6d2077;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+hr {
+  margin-left: 2%;
+  margin-right: 2%;
+  color: #84bd00;
+  border: 1px solid #84bd00;
+}
+
+.iconPrincipalEspecialiade {
+  content: url("../img/principal/btn_especialidades.png");
+}
+
+.iconPrincipalHospital {
+  content: url("../img/principal/btn_hospitais.png");
+}
+
+.iconPrincipalMeusRemedios {
+  content: url("../img/principal/btn_especialidades.png");
+}
+
+.iconPrincipalMinhaSaude {
+  content: url("../img/principal/btn_especialidades.png");
+}
+
+.iconMinhaSaudeBtnAlergias {
+  content: url("../img/minhasaude/btn_alergias.png");
+}
+
+.iconMinhaSaudeBtnDadosMonitorados {
+  content: url("../img/minhasaude/btn_dados_Monitorados.png");
+}
+
+.iconMinhaSaudeBtnGerItens {
+  content: url("../img/minhasaude/btn_gerenciar_itens.png");
+}
+
+.iconMinhaSaudeBtnHabitos {
+  content: url("../img/minhasaude/btn_habitos.png");
+}
+
+.iconMinhaSaudebtnHistDoencas {
+  content: url("../img/minhasaude/btn_historico_doencas.png");
+}
+
+.iconMinhaSaudeBtnNecessidadesEspeciais {
+  content: url("../img/minhasaude/btn_necessidades_especiais.png");
+}
+
+.btnHomeMinhaSaude {
+  float: left;
+  width: 33%;
+}
+
+.imgMinhaSaudeHome {
+  width: 98%;
+  margin-left: 2%;
+}
+
+.floatleft {
+  float: left;
+}
+
+.iconRanner {
+  content: url("../img/minhasaude/ranner.png");
+}
+
+.iconGrafico {
+  content: url("../img/minhasaude/grafico.png");
+}
+
+.contagemPassos {
+  margin-top: 2%;
+  float: left;
+}
+
+  .contagemPassos p {
+    color: #6d2077 !important;
+    font-weight: bold;
+    font-size: 1.3em !important;
+    ;
+    text-align: center;
+  }
+
+.button-app .button {
+  background: #0079A4;
+  border-bottom: 4px solid #04506A;
+  color: #FFF;
+  width: 100%;
+  font-size: 1.4em;
+  margin-top: 10px;
+}
+  /*********************/
+
+  .button-app .button.activated {
+    background: #04506A;
+    border-bottom: 4px solid #0079A4;
+  }
+
+.button-app1 .button.activated {
+  background: #84BD00;
+  border-bottom: 4px solid #fff;
+}
+
+.vertical-align {
+  height: auto;
+  width: auto;
+  vertical-align: middle;
+}
+
+.informative {
+  left: 20px;
+}
+
+.notification {
+  left: 60px;
+}
+
+.qrcode,
+.share {
+  position: absolute;
+  bottom: 20px;
+  font-size: 2em;
+  /*40px;*/
+}
+
+.qrcode {
+  left: 90px;
+}
+
+  .share i,
+  .qrcode i {
+    color: #6D2077;
+  }
+
+
+.share {
+  right: 20px;
+}
+
+  .share i,
+  .notification i {
+    color: #6D2077;
+  }
+
+  .share i,
+  .informative i {
+    color: #6D2077;
+  }
+
+.detalhe ul {
+  background-color: #FCF7FD;
+}
+
+.detalhe li {
+  display: inline-block;
+  padding-top: 0;
+  width: 32%;
+  color: #6D2077;
+}
+
+/* Alergias */
+
+.alergias .bar.custom-color.bar-header {
+  background-color: #0047bb;
+  border-bottom: 1px solid #EAE3E3;
+  color: #fff;
+}
+
+.alergias .header-item {
+  left: 0 !important;
+  text-align: center !important;
+  text-transform: none !important;
+  font-weight: bold;
+}
+
+.iconAddAlergias {
+  content: url("../img/btn_config.png");
+  background-color: #fff !important;
+  border: none !important;
+  height: 54px;
+}
+
+#idListAlergias .item {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: solid 2px #0047bb !important;
+}
+
+#idListAlergias .item-complex.item-icon-right .item-content {
+  padding: 0;
+}
+
+#idListAlergias > div > ion-item > div.item-options > ion-option-button {
+  background: #0047bb;
+  border-bottom: 4px solid #0047bb;
+  color: #FFF;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+#idListAlergias > div > ion-item > div.item-content > i {
+  color: #0047bb;
+}
+
+#footerAlergias {
+  height: 80px !important;
+}
+
+#idListAlergias > div > ion-item > a > i {
+  color: #0047bb;
+}
+
+#addAlergiaForm > div > div > input {
+  width: 100%;
+}
+/* Historicos de Doenças */
+.histoDoencas .bar.custom-color.bar-header {
+  background-color: #9e007e;
+  border-bottom: 1px solid #EAE3E3;
+  color: #fff;
+}
+
+.histoDoencas .header-item {
+  left: 0 !important;
+  text-align: center !important;
+  text-transform: none !important;
+  font-weight: bold;
+}
+
+.histoDoencas .item h3 {
+  border: none !important;
+  text-transform: initial !important;
+}
+
+.histoDoencas .item-content {
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.histoDoencas .btnhist {
+  background-color: #fff !important;
+  border: 1px solid #9e007e;
+  border-bottom: 1px solid #9e007e !important;
+  font-size: 1.1em !important;
+  color: #9e007e !important;
+  width: 86%;
+}
+
+.tituloHistoDoencas {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: #9e007e;
+}
+
+  .tituloHistoDoencas h3 {
+    color: #9e007e;
+  }
+
+#idListAntecedentes .item {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: solid 2px #9e007e !important;
+}
+
+#idListAntecedentes .item-complex.item-icon-right .item-content {
+  padding: 0;
+}
+
+#idListAntecedentes > div > ion-item > div.item-options > ion-option-button {
+  background: #9e007e;
+  border-bottom: 4px solid #9e007e;
+  color: #FFF;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+#idListAntecedentes > div > ion-item > div.item-content > i {
+  color: #9e007e;
+}
+
+
+
+#idListAntecedentes > div > ion-item > a > i {
+  color: #9e007e;
+}
+
+#addhistForm > div > div > input {
+  width: 100% !important;
+}
+
+#idValorData {
+  border: none !important;
+}
+
+#idtemporizador {
+  border: none !important;
+}
+
+#btnAddListCirur {
+  top: initial !important;
+  position: initial !important;
+}
+
+#divtemporizador {
+  margin-left: 6px;
+}
+
+.ptitlebold {
+  font-weight: bold;
+}
+/*Habitos*/
+.habitos .bar.custom-color.bar-header {
+  background-color: #eaaa00;
+  border-bottom: 1px solid #EAE3E3;
+  color: #fff;
+}
+
+.habitos .header-item {
+  left: 0 !important;
+  text-align: center !important;
+  text-transform: none !important;
+  font-weight: bold;
+}
+
+.habitos.texto-default h2 {
+  color: #eaaa00 !important;
+  text-transform: initial !important;
+}
+
+.habitos .item h3 {
+  border: none !important;
+  color: #eaaa00 !important;
+  text-transform: initial !important;
+}
+
+.habitos .item {
+  border: none !important;
+  padding-bottom: 0;
+}
+
+.habitos.texto-default .item:first-child {
+  border: none !important;
+}
+
+
+.habitos.texto-default.texto-default .ion-edit {
+  background: #fff;
+  color: #eaaa00;
+}
+
+#idListaBebidas > div > ion-item > div > ion-option-button {
+  background: #eaaa00;
+  border-bottom: 4px solid #eaaa00;
+}
+
+#idListaAtvfisica > div > ion-item > div > ion-option-button {
+  background: #eaaa00;
+  border-bottom: 4px solid #eaaa00;
+}
+
+
+#idbebidaativa {
+  border-color: #eaaa00 !important;
+}
+
+.itemhabitosclear {
+  padding: 0 !important;
+}
+
+  .itemhabitosclear a {
+    padding: 0 !important;
+  }
+
+  .itemhabitosclear p {
+    margin-right: 5px !important;
+  }
+
+.divRadius .col-90 {
+  border-left: 1px solid #eaaa00;
+  border-bottom: 1px solid #eaaa00;
+  border-top: 1px solid #eaaa00;
+  flex: 0 0 85% !important;
+  max-width: 85% !important;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.divRadius .col-10 {
+  border: 1px solid #eaaa00;
+  flex: 0 0 15% !important;
+  max-width: 15% !important;
+  text-align: center;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.divRadius .col-90-invert {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: 1px solid #eaaa00;
+  flex: 0 0 85% !important;
+  max-width: 85% !important;
+}
+
+.divRadius .col-10-invert {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-left: 1px solid #eaaa00;
+  border-bottom: 1px solid #eaaa00;
+  border-top: 1px solid #eaaa00;
+  flex: 0 0 15% !important;
+  max-width: 15% !important;
+}
+
+.divRadius select {
+  border: none;
+  background: #fff;
+  color: #eaaa00;
+  width: 100%;
+}
+
+.habitos input {
+  border: none !important;
+  background: #fff;
+  color: #eaaa00 !important;
+  width: 100%;
+}
+
+  .habitos input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #eaaa00;
+  }
+
+  .habitos input::-moz-placeholder { /* Firefox 19+ */
+    color: #eaaa00;
+  }
+
+  .habitos input:-ms-input-placeholder { /* IE 10+ */
+    color: #eaaa00;
+  }
+
+  .habitos input:-moz-placeholder { /* Firefox 18- */
+    color: #eaaa00;
+  }
+
+.divRadiusInput .col {
+  border: 1px solid #eaaa00;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.2em;
+}
+
+
+/*Dados Monitorados*/
+
+.dados-monitorados .bar.custom-color.bar-header {
+  background-color: #c4d600;
+  border-bottom: 1px solid #EAE3E3;
+  color: #fff;
+}
+
+.dados-monitorados .header-item {
+  left: 0 !important;
+  text-align: center !important;
+  text-transform: none !important;
+  font-weight: bold;
+}
+
+.dados-monitorados.texto-default h2 {
+  color: #c4d600 !important;
+  text-transform: initial !important;
+}
+
+.dados-monitorados .item h3 {
+  border: none !important;
+  color: #c4d600 !important;
+  text-transform: initial !important;
+}
+
+.divBoxDados {
+  float: left;
+  width: 33%;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #c4d600;
+  height: 132px;
+}
+
+  .divBoxDados h3 {
+    color: #c4d600;
+    font-size: 1.7em;
+  }
+
+.dados-monitorados .divBoxTitle {
+  color: #c4d600;
+  margin-top: 10px;
+}
+
+.dados-monitorados a:link {
+  text-decoration: none;
+}
+
+.dados-monitorados a:visited {
+  text-decoration: none;
+}
+
+.dados-monitorados a:hover {
+  text-decoration: none;
+}
+
+.dados-monitorados a:active {
+  text-decoration: none;
+}
+
+.dados-monitorados .divBoxSubj {
+  font-size: 1.4em;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-top: 8px;
+}
+
+.dados-monitorados .divBoxSubTitle {
+  color: #c4d600;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/*Necessidades Especiais / Meus remedios*/
+
+.nesseciesp .bar.custom-color.bar-header {
+  background-color: #b288b9;
+  border-bottom: 1px solid #EAE3E3;
+  color: #fff;
+}
+
+.nesseciesp .header-item {
+  left: 0 !important;
+  text-align: center !important;
+  text-transform: none !important;
+  font-weight: bold;
+}
+
+.nesseciesp.texto-default h2 {
+  color: #b288b9 !important;
+  text-transform: initial !important;
+}
+
+.nesseciesp .item h3 {
+  border: none !important;
+  color: #b288b9 !important;
+  text-transform: initial !important
+}
+
+.nesseciesp .toggle input:checked + .track {
+  background-color: #4cd964;
+}
+
+.nesseciesp .toggle .track {
+  border-color: #b288b9 !important;
+}
+
+.nesseciesp .toggle .handle {
+  background-color: #ccc;
+}
+
+.nesseciesp .toggle input:checked + .track .handle {
+  background-color: #b288b9;
+}
+
+.titleneces {
+  font-size: 1.5em;
+  color: #b288b9;
+}
+
+.nesseciesphr {
+  border: 1px #b288b9 solid;
+  margin-top: 0;
+}
+
+
+.necessSub {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.necessSubFont {
+  color: #b288b9 !important;
+}
+
+
+#IdListaNecess > div > ion-item {
+  border: none !important;
+}
+
+
+.btnMedicamento {
+  background-color: #fff !important;
+  border: 1px solid #b288b9 !important;
+  font-size: 1.5em !important;
+  color: #b288b9 !important;
+  width: 86% !important;
+  margin-top: 10px;
+}
+
+.borda-arredondada-medicamentos {
+  border: 1px solid #b288b9;
+  flex: 0 0 85% !important;
+  border-radius: 8px;
+}
+
+input[name='dose'] {
+  width: 40px;
+  float: left;
+}
+
+select[name='tempoAdiamentoAlarme'] {
+  width: 80px;
+  border: none;
+}
+
+select[name='intervaloHora'] {
+  width: 80px;
+  border: none;
+  margin-top: 18px;
+}
+
+.firtDivbox > label {
+  float: left;
+}
+
+.firtDivbox > p {
+  padding-top: 4%;
+}
+
+.hrMedicamentos {
+  border: solid 1px #b288b9;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.boxMed {
+  width: 100%;
+  border: 1px solid #b288b9 !important;
+  flex: 0 0 100% !important;
+  border-radius: 8px;
+  margin-top: 3%;
+}
+
+.tituloBoxMedicamento {
+  margin-left: 3%;
+  margin-bottom: 0;
+}
+
+.resetp {
+  text-transform: initial !important;
+  margin-left: 10px !important;
+}
+
+.repeathour {
+  text-align: center;
+}
+
+#btnConfirmarCadMed {
+  background-color: #eaf1cd !important;
+  border: 1px solid #b288b9 !important;
+  font-size: 1.5em !important;
+  color: #666 !important;
+  width: 86% !important;
+  margin-top: 10px;
+}
+
+#btnSuspenderCadMed {
+  background-color: #f7cfcb !important;
+  border: 1px solid #b288b9 !important;
+  font-size: 1.5em !important;
+  color: #666 !important;
+  width: 86% !important;
+  margin-top: 10px;
+}
+
+.centralizabotao {
+  text-align: center;
+}
+/* Genericos  */
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active {
+  color: #F54C0B;
+}
+
+.bar.custom-color.bar-header {
+  background-color: #6D2077;
+  border-bottom: 1px solid #EAE3E3;
+  color: #fff;
+}
+
+.custom-color {
+  background-color: #00448b;
+  border-bottom: 1px solid #EAE3E3;
+  color: #fff;
+}
+
+.bar.custom-color.title {
+  color: #fff;
+}
+
+.button-clear {
+  color: #fff;
+}
+
+.bar .button.button-icon .icon:before,
+.bar .button.button-icon:before,
+.bar .button.button-icon.icon-left:before,
+.bar .button.button-icon.icon-right:before {
+  font-size: 1.5em;
+  /*25px;*/
+}
+
+.tab-item .icon {
+  font-size: 1.5em;
+  /*22px;*/
+  margin-top: 5px;
+  height: 23px;
+}
+
+.clear {
+  clear: both;
+}
+
+.spinner.spinner-android {
+  color: #F54C0B;
+}
+
+.ng-hide-add {
+  transition: 0 linear all;
+}
+
+
+/* remover o tempo do efeito de hide/show do ng */
+
+.popup-navigator .popup {
+  height: 152px;
+}
+
+  .popup-navigator .popup .scroll-content {
+    height: 152px;
+  }
+
+.popup-navigator .popup-body {
+  padding: 0;
+}
+
+.popup-navigator .modal {
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+  .popup-navigator .modal .title {
+    text-align: center;
+  }
+
+.platform-android .action-sheet-wrapper .action-sheet-title {
+  font-weight: bold;
+}
+
+.platform-android .action-sheet .button {
+  font-weight: normal;
+  color: #666;
+  padding-left: 16px;
+  background: #ECEAEA;
+  border-radius: 5px;
+  width: 95%;
+  margin: 9px;
+}
+
+.modal-select .title-page {
+  height: 40px;
+  color: #FFF;
+  background: #20B6CE;
+  font-size: 1.3em;
+  text-align: center;
+  padding: 7px;
+}
+
+a.tab-item i {
+  color: #0279A4;
+}
+
+a.tab-item span {
+  color: #0279A4;
+}
+
+a.tab-item.tab-item-active i {
+  color: #F54C0B;
+}
+
+a.tab-item.tab-item-active span {
+  color: #F54C0B;
+  font-weight: bold;
+}
+
+.title-page a.close {
+  color: #FFF;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.offline-message {
+  text-align: center;
+  color: #FFF;
+  background-color: red;
+  height: 23px;
+  width: 100%;
+  position: absolute;
+  z-index: 9999;
+  padding: 1px;
+}
+
+
+/* Genericos  End */
+
+
+/* Section Login  */
+
+.labelLogin {
+  color: #1C1C1C;
+}
+
+
+.labelpreferencial {
+  font-size: 1.1em;
+  margin: 500px 30px 0 30px;
+  color: white;
+}
+
+.login {
+  /*background: url('../img/hospital.jpg');*/
+  background-color: #6D2077;
+  background-size: cover;
+}
+
+  .login .container .logo {
+    width: 40%;
+    margin-top: 10px;
+  }
+
+  .login .container {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+    .login .container .field-form input {
+      width: 100%;
+      margin: 20px 0;
+      padding: 10px;
+      height: 45px
+    }
+
+    .login .container .forget-password {
+      color: #FFF;
+      text-decoration: none;
+    }
+
+    .login .container .main-title {
+      color: #FFF;
+      font-size: 3.8em;
+      text-align: center;
+      margin-top: 20%;
+    }
+
+    .login .container .main-form {
+      margin-top: 15%;
+    }
+
+@media (max-width: 320px) {
+  .login .container .main-title {
+    color: #FFF;
+    font-size: 3.8em;
+    text-align: center;
+    margin-top: 17%;
+  }
+
+  .login .container .main-form {
+    margin-top: 23%;
+  }
+}
+
+
+/* Section Login - End  */
+
+
+/* Section Home  */
+
+.buttons-right .badge {
+  position: absolute;
+  z-index: 999;
+  color: white;
+  left: 3px;
+  top: 2px;
+  font-size: 0.9em;
+}
+
+.home .welcome {
+  height: 73px;
+  margin: 6% 6% 0 5%;
+  background-color: #FCF7FD;
+  padding: 20px 20px 0 20px;
+  text-align: center;
+  font-size: 1.5em;
+  color: #504444;
+  line-height: 1;
+  width: 90%;
+}
+
+.home .container {
+  height: 100%;
+}
+
+  .home .container .box {
+    background-color: #0079A4;
+    float: left;
+    margin: 6% 0 0 4.5%;
+    width: 43%;
+    height: 140px;
+    color: #FFF;
+    text-align: center;
+  }
+
+    .home .container .box.activated {
+      background-color: #025A79;
+    }
+
+    .home .container .box i {
+      font-size: 5em;
+      top: 20px;
+      position: relative;
+    }
+
+    .home .container .box h3 {
+      font-size: 1.4em;
+      top: 10px;
+      position: relative;
+      color: #FFF;
+    }
+
+    .home .container .box.full {
+      background-color: #F54C0B;
+      width: 91%;
+      height: 120px;
+      text-align: center;
+    }
+
+      .home .container .box.full.activated {
+        background-color: #CA420E
+      }
+
+      .home .container .box.full i,
+      .home .container .box.full h3 {
+        float: left;
+        margin-left: 31px;
+      }
+
+      .home .container .box.full h3 {
+        margin-top: 40px;
+      }
+
+
+/* Section Home - End  */
+
+
+/* Section Farmácia  */
+
+.farmacia .search-box {
+  background: #ECE7E7;
+  width: 91%;
+  margin: 6% 0 0 4.5%;
+  padding: 7px 0 4px 10px;
+  position: absolute;
+  z-index: 100;
+  height: 46px;
+}
+
+  .farmacia .search-box .search {
+    background-color: transparent;
+    width: 90%;
+  }
+
+  .farmacia .search-box .btn-search {
+    color: #58ADB2;
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    /*28px;*/
+    width: 10%;
+    position: absolute;
+    top: 4px;
+    right: 25px;
+  }
+
+.farmacia #map_farmacia {
+  height: 100%;
+}
+
+.farmacia .maker-custom {
+  width: 180px;
+}
+
+  .farmacia .maker-custom a.nav-maker {
+    display: block;
+    padding: 6px 10px 10px 6px;
+    background: #58ADB2;
+    color: #FFF;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 3px;
+  }
+
+
+/* Section Farmácia - End  */
+
+
+/* Section Perfil  */
+
+.perfil .profile {
+  background-color: #20B6CE;
+  color: #FFF;
+  min-height: 120px;
+}
+
+  .perfil .profile img {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+  }
+
+  .perfil .profile .description {
+    float: right;
+    width: 60%;
+    margin-top: 20px;
+  }
+
+    .perfil .profile .description h3 {
+      color: #FFF;
+      font-size: 2.0em;
+      margin: 0;
+    }
+
+    .perfil .profile .description i {
+      position: absolute;
+      right: 7px;
+      top: 50px;
+      font-size: 2em;
+    }
+
+    .perfil .profile .description p {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+  .perfil .profile img {
+    width: 25%;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background-color: #FFF;
+    width: 93px;
+    height: 94px;
+  }
+
+.perfil .list .item {
+  border-color: transparent;
+  padding: 5.6%;
+  border-top: 1px solid #20B6CE;
+}
+
+  .perfil .list .item a {
+    color: #20B6CE;
+  }
+
+  .perfil .list .item input {
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #c2c2c2;
+    border-radius: 4px;
+    padding: 6px;
+  }
+
+.perfil .edit-img {
+  position: absolute;
+  color: #FFF;
+  font-size: 1.5em;
+  top: 90px;
+  left: 57px;
+}
+
+.perfil .list .item p:first-child {
+  color: #727272;
+  font-size: 1.0em;
+}
+
+.perfil .list .item p {
+  color: #B7B5B6;
+}
+
+.perfil.editar .list .item {
+  border-color: transparent;
+  padding: 5.6% 5.6% 0 5.6%;
+}
+
+  .perfil.editar .list .item input {
+    border-color: transparent;
+    background: #F9F7F7;
+    background: #F1F0EE;
+    color: #63615E;
+  }
+
+@media (max-width: 320px) {
+  .perfil .edit-img {
+    top: 90px;
+    left: 57px;
+  }
+}
+
+
+/* Section Perfil - End  */
+
+
+/* Section Primeiro acesso */
+
+.login.primeiro-acesso .main-title {
+  font-size: 3em;
+}
+
+.login.primeiro-acesso p {
+  text-align: center;
+  color: #FFF;
+  font-size: 1.1em;
+}
+
+/* Section hospitais */
+/** ESPECILAIDADE **/
+.especialidades i {
+  position: absolute;
+  right: 20px;
+  color: #6F6F6F;
+}
+
+.especialidades .item {
+  color: #2F4B61;
+  border-color: #99CA6B;
+  text-transform: capitalize;
+  font-size: 1.5em;
+}
+
+  .especialidades .item:first-child {
+    border-color: #ddd;
+    border-bottom: 1px solid #20B6CE;
+  }
+
+.hospitais i {
+  color: #fff;
+}
+
+.menu-list li {
+  position: relative;
+}
+
+.input-label {
+  color: #6D2077;
+}
+
+input, select {
+  border: 1px solid black;
+}
+
+
+.hospitais i.maker {
+  right: 0;
+  top: 36px;
+}
+
+.hospitais .title-page {
+  height: 40px;
+  color: #706E6F;
+  background: #EEEDEB;
+  font-size: 1.1em;
+  text-align: center;
+  padding: 10px;
+}
+
+.hospitais .item h3 {
+  color: #6D2077;
+  font-family: 'Hind-SemiBold';
+  white-space: normal;
+  text-transform: capitalize;
+  font-size: 1.1em;
+}
+
+.hospitais .item {
+  color: #BAB8B9;
+  border-color: #99CA6B;
+}
+
+  .hospitais .item:first-child {
+    border-color: #ddd;
+    border-bottom: 1px solid #20B6CE;
+  }
+
+.hospital-detalhe {
+  color: #fff;
+  margin-top: -45px;
+}
+
+  .hospital-detalhe .button {
+    background: #6D2077;
+    border-bottom: 4px solid #6D2077;
+    color: #FFF;
+    width: 80%;
+    font-size: 1.4em;
+    margin-top: 10px;
+  }
+
+  .hospital-detalhe .detalhe {
+    text-align: center;
+  }
+
+    .hospital-detalhe .detalhe h2 {
+      color: #6D2077;
+    }
+
+    .hospital-detalhe .detalhe p {
+      color: #6D2077;
+      font-size: 0.9em;
+      /*90%;*/
+      text-transform: uppercase;
+      padding: 10px;
+    }
+
+      .hospital-detalhe .detalhe p a {
+        color: #0079A4;
+        font-size: 1.0em;
+        text-decoration: none;
+      }
+
+/* MAPS */
+
+.scroll {
+  height: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.map-container {
+  position: absolute;
+  top: 44px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.buscaHospitais {
+  padding-top: 30px;
+  margin-bottom: 5px;
+}
+
+.aviso {
+  text-align: center;
+  /*background: #ECE9E9;*/
+  color: #6D2077;
+}
+
+
+.button.active {
+  color: #fff;
+  background-color: #84BD00;
+  /* #20B6CE; */
+}
+
+
+.inactive,
+.inactive a i {
+  color: #777;
+}
+
+.tempo-espera-hospital i {
+  float: left;
+  background-color: #6D2077;
+}
+
+.tempo-espera-hospital span {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  background-color: #6D2077;
+}
+
+.tempo-espera {
+  display: table-cell;
+  text-align: center;
+  font-weight: bold;
+  /* background-color: #20B6CE;*/
+  padding: 5px;
+  color: #6D2077;
+  width: 78px;
+  border-bottom: 1px solid #fff;
+}
+
+  .tempo-espera i,
+  .tempo-espera h4 {
+    display: block;
+    color: #6D2077;
+  }
+
+  .tempo-espera h4 {
+    margin: 2px 0 -2px 0;
+  }
+
+.buscadescricao-hospital {
+  display: table-cell;
+  padding-right: 40px;
+  margin: auto;
+}
+
+.descricao-hospital {
+  display: table-cell;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.hospitais .item-content,
+.hospitais .item {
+  padding: 0;
+}
+
+.historico .button-bar > a,
+.hospitais .button-bar > a {
+  border-color: #84BD00;
+}
+
+
+.bar.bar-subheader {
+  height: auto;
+}
+
+.hospitais .has-subheader {
+  top: 168px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.loading {
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px 0;
+}
+
+.slider {
+  height: 225px;
+}
+
+.bar {
+  background-image: none !important;
+}
+
+.platform-ios.platform-cordova:not(.fullscreen) .has-subheader {
+  top: 190px;
+}
+
+/*texto padrão*/
+.texto-default .button-adicionar {
+  width: 45%;
+  margin-top: 11px;
+  font-size: 1.0em !important;
+  padding: 1px !important;
+  min-height: 30px !important;
+  height: 37px;
+  line-height: 34px;
+}
+
+.texto-default .button {
+  background: #6D2077;
+  border-bottom: 4px solid #6D2077;
+  color: #FFF;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+.texto-default .hold-plus .button-plus {
+  height: 32px;
+  top: 10px;
+  padding: 1px;
+}
+
+.texto-default .hold-plus-habitos .button-plus {
+  height: 35px;
+  top: 3px;
+  padding: 1px;
+}
+
+.texto-default .button-plus {
+  background: #6D2077;
+  border-bottom: 4px solid #6D2077;
+  color: #FFF;
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  min-width: 40px;
+  min-height: 20px !important;
+  height: 38px;
+  padding: 4px;
+}
+
+.texto-default .button .icon:before, .button.icon:before, .button.icon-left:before, .button.icon-right:before {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.texto-default .titulo-esquerda {
+  text-align: left;
+}
+
+.texto-default h2 {
+  color: #6D2077;
+  white-space: normal;
+  text-transform: uppercase;
+  font-size: 1.0em;
+}
+
+.texto-default .item h3 {
+  color: #6D2077;
+  white-space: normal;
+  text-transform: uppercase;
+  font-size: 1.0em;
+}
+
+.texto-default .item h4 {
+  color: #666;
+  white-space: normal;
+  text-transform: uppercase;
+  font-size: 0.7em;
+}
+
+.texto-default .item-divider {
+  text-align: center;
+}
+
+.texto-default .sem-fundo {
+  background-color: #FFFFFF !important;
+}
+
+.texto-default .item-antecedenteF {
+  padding-left: 15px;
+  line-height: 150%;
+}
+
+  .texto-default .item-antecedenteF h3 {
+    color: #666;
+  }
+
+.texto-default .item {
+  color: #6D2077;
+  font-size: 1.5em;
+  line-height: 150%;
+}
+
+  .texto-default .item:first-child {
+    border-color: #ddd !important;
+  }
+
+.texto-default .lista .item {
+  border-color: #84BD00;
+}
+
+.texto-default .item input {
+  font-size: 0.6em;
+  color: #666;
+}
+
+.texto-default .item-input {
+  width: 100%;
+}
+
+.texto-default .item span {
+  color: #6D2077;
+  font-size: 0.6em;
+}
+
+.texto-default .button-rodape-metade {
+  width: 45%;
+}
+
+.texto-default .button-rodape-full {
+  width: 100%;
+}
+
+.texto-default .botao-adicionar {
+  width: 80%;
+}
+
+
+.texto-default .bar-footer {
+  height: 55px !important;
+}
+
+.texto-default .applyFooter {
+  margin-bottom: 50px !important;
+}
+
+.texto-default .lista-antecedenteF {
+  padding-left: 20px;
+}
+
+
+.texto-default .item .dados-monitorados .conteudo h3 {
+  font-size: 0.9em;
+  color: #666;
+  padding-top: 2px;
+}
+
+.texto-default .item .dados-monitorados .titulo {
+  padding-right: 10px;
+  float: left;
+}
+
+
+.historico .bar-subheader .button-bar > .button {
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  overflow: visible;
+  padding: 0 10px;
+}
+
+.button-plus .button .icon:before {
+  display: inline-block;
+  padding: 0 0 0 0;
+  vertical-align: inherit;
+  font-size: 15px;
+  line-height: 30px !important;
+  pointer-events: none;
+}
+
+.texto-default p {
+  font-size: 1.0em;
+  color: #666;
+  line-height: 150%;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  white-space: normal;
+  text-transform: uppercase;
+}
+
+.texto-default .valor {
+  position: absolute;
+  top: 30px;
+  right: 85px;
+  font-weight: bold;
+}
+
+.hold {
+  width: 80%;
+}
+
+.hold-number-margem {
+  margin-left: 15px;
+}
+
+.hold-number {
+  width: 20%;
+}
+
+.hold-select {
+  width: 60%;
+}
+
+.hold-plus {
+  width: 20%;
+}
+
+.hold-number input {
+  padding-right: 5px !important;
+  height: 25px;
+  border: 1px #ccc solid;
+  text-align: center;
+  height: 30px;
+}
+
+.select-data {
+  width: 90%;
+  color: #666;
+  height: 30px;
+}
+
+.sem-linha {
+  border-top-color: white;
+}
+
+
+
+/*delete button*/
+
+.delete-button {
+  background: #6D2077;
+  color: #FFF;
+  font-size: 0.9em;
+}
+
+  .delete-button:hover {
+    color: #FFF;
+  }
+
+
+
+.lista-padrao h3 {
+  color: #6D2077;
+  font-size: 1.1em;
+  margin-top: 14px;
+  text-align: center;
+}
+
+
+.checkbox input:checked + .checkbox-icon:before {
+  background: #6D2077;
+  border-color: #6D2077;
+}
+
+.button-footer {
+  background: #6D2077;
+  border-bottom: 4px solid #6D2077;
+  color: #FFF;
+  width: 25%;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+
+
+.historico .conteudoFixo {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-left: 2%;
+}
+
+.historico .conteudoNormal {
+  float: left;
+  width: 100%;
+  /* overflow: auto; */
+  position: absolute;
+  bottom: 50px;
+}
+
+.historico .chartAreaWrapper {
+  height: 160px;
+}
+/*accordion*/
+
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -o-transition: 0.09s all linear;
+  -webkit-transition: 0.09s all linear;
+  transition: 0.09s all linear;
+}
+
+  .list .item.item-accordion.ng-hide {
+    line-height: 0;
+  }
+
+  .list .item.item-accordion.ng-hide-add,
+  .list .item.item-accordion.ng-hide-remove {
+    display: block !important;
+  }
+
+.texto-default .button-adicionarHorario {
+  width: 45%;
+  margin-top: 11px;
+  font-size: 1.0em !important;
+  padding: 1px !important;
+  min-height: 30px !important;
+  height: 37px;
+  line-height: 34px;
+}
+
+.bar.bar-balanced .title {
+  font-family: 'Hind-SemiBold';
+}

@@ -1,0 +1,101 @@
+<ion-view cache-view="false" view-title="Necessidades especiais" class="nesseciesp">
+
+  <ion-nav-bar class="custom-color bar-balanced">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content class="texto-default">
+    <!--<ion-list>
+      <ion-item ng-if="necessidadesUsuario.Itens.length == 0" href="#/menu/minha-saude/necessidades-especiais/detalhe-necessidades-especiais"
+                class="item item-text-wrap item-icon-right">
+        Informe se você é portador de alguma necessidade especial
+        <i class="icon icon-seta_direita"></i>
+      </ion-item>
+      <ion-item ng-if="necessidadesUsuario.Itens.length > 0" href="#/menu/minha-saude/necessidades-especiais/detalhe-necessidades-especiais"
+                class="item-icon-right">
+        <div ng-repeat="necessidade in necessidadesUsuario.Itens">
+          <h3>  {{necessidade.DescricaoNecessidade}}</h3>
+        </div>
+        <i class="icon icon-seta_direita"></i>
+      </ion-item>
+    </ion-list>-->
+
+    <div class="row">
+      <div class="col col-80">
+        <div class="titleneces">Portador de <br />Necessidades especiais</div>
+      </div>
+      <div class="col col-10">
+        <label class="toggle">
+          <input id="habilitanecessi" name="habilitanecessi" type="checkbox" ng-checked="exibeNecessidadeEspecais" >
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+    </div>
+    <hr class="nesseciesphr" noshade />
+    <ion-list id="IdListaNecess" ng-if="exibeNecessidadeEspecais" name="IdListaNecess">
+      <ion-item ng-if="necessidadesUsuario.length > 0">
+        <div class="row" ng-repeat="necessidade in necessidadesUsuario">
+          <div class="col col-20">
+            <label class="toggle">
+              <input type="checkbox"  ng-model="necessidade.Checked" ng-change="atualizarNecessidades()" ng-checked="necessidade.Checked" >
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </div>
+          <div class="col col-80">
+            <div class="necessSub">{{necessidade.DescricaoNecessidade}}</div>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+
+
+    <!--<div class="row">
+        <div class="col col-20">
+            <label class="toggle">
+                <input type="checkbox">
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+        </div>
+        <div class="col col-80">
+            <div class="necessSub">Déficit auditivo</div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col col-20">
+            <label class="toggle">
+                <input type="checkbox">
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+        </div>
+        <div class="col col-80">
+            <div class="necessSub">Déficit cognitivo</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-20">
+            <label class="toggle">
+                <input type="checkbox">
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+        </div>
+        <div class="col col-80">
+            <div class="necessSub">Déficit de fala</div>
+        </div>
+    </div>-->
+
+  </ion-content>
+</ion-view>

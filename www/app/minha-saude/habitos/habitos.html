@@ -1,0 +1,130 @@
+<ion-view cache-view="false" view-title="Hábitos" class="texto-default habitos">
+
+  <ion-nav-bar class="custom-color bar-balanced">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content>
+
+    <div class="item">
+      <div class="divRadius row">
+        <div class="col col-90">
+          <h2>Tabagismo</h2>
+        </div>
+        <div class="col col-10">
+          <a href="#/menu/minha-saude/habitos/adicionar-detalhe-tabagismo" class="icon ion-edit"></a>
+        </div>
+      </div>
+    </div>
+    <ion-list id="idListaTabagismo" class="itemhabitosclear">
+      <ion-item ng-if="habitoTabagismo.length > 0" ng-repeat="habito in habitoTabagismo" href="#/menu/minha-saude/habitos/editar-detalhe-tabagismo/{{habito}}"
+                class="no-padding item item-icon-right  itemhabitosclear">
+
+          <div class="row" ng-if="habito.Fumante == true">
+            <div class="col col-90">
+              <p class="resetp">Sim, há {{habito.DataInicioConsumo | relativeDate}}, sendo {{habito.QuantidadeDiaria}} cigarros por dia</p>
+            </div>
+          </div>        
+          <div class="row" ng-if="habito.Fumante == false">
+            <div class="col col-90">
+              <p class="resetp">não</p>
+            </div>
+          </div>
+        <!--<ion-option-button class="button delete-button icon-left" ng-click="removerConsumoBebida(habito.Id)"><i class="icon ion-trash-b"></i></ion-option-button>
+        <i class="icon ion-edit"></i>-->
+      </ion-item>
+      <ion-item ng-if="habitoTabagismo.length == 0" class="no-padding item item-icon-right">
+        <div class="row">
+          <div class="col">
+            <p class="resetp">Adicione seu hábito sobre tagagismo</p>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+    <div class="item">
+      <div class="divRadius row">
+        <div class="col col-90">
+          <h2>Consumo de bebidas</h2>
+        </div>
+        <div class="col col-10">
+          <a href="#/menu/minha-saude/habitos/adicionar-detalhe-bebidas/{{habitoConsumoBebidas}}" class="icon ion-edit"></a>
+        </div>
+      </div>
+    </div>
+    <ion-list id="idListaBebidas">
+      <!--<ion-item ng-if="showHabitoConsumoBebidas">
+        <div class="row">
+          <div class="col">
+            <p class="resetp ptitlebold">{{habitoConsumoBebidas.ConsomeBebida == true ? "Sim" : "Não"}}</p>
+          </div>
+        </div>
+    
+      </ion-item>-->
+      <ion-item ng-if="habitoConsumoBebidas.ItensBebidas.length > 0" ng-repeat="habito in habitoConsumoBebidas.ItensBebidas  | orderBy:'DescricaoBebida'" href="#/menu/minha-saude/habitos/editar-detalhe-bebidas/{{habito}}"
+                class="no-padding item item-icon-right itemhabitosclear">
+        <div class="row">
+          <div class="col col-90">
+            <p class="resetp">Sim, {{habito.DescricaoBebida}} em uma frequencia de{{habito.Frequencia}} </p>
+          </div>
+        </div>       
+        <ion-option-button class="button delete-button icon-left" ng-click="removerConsumoBebida(habito.Id)"><i class="icon ion-trash-b"></i></ion-option-button>
+        <i class="icon ion-edit"></i>
+      </ion-item>
+      <ion-item ng-if="!showHabitoConsumoBebidas" class="no-padding item item-icon-right itemhabitosclear">
+        <div class="row">
+          <div class="col">
+            <p class="resetp">Adicione seu hábito sobre consumo de bebidas</p>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+    <div class="item">
+      <div class="divRadius row">
+        <div class="col col-90">
+          <h2>Atividade física</h2>
+        </div>
+        <div class="col col-10">
+          <a href="#/menu/minha-saude/habitos/adicionar-detalhe-ativ-fisica/{{habitoAtvFisica}}" class="icon ion-edit"></a>
+        </div>
+      </div>
+    </div>
+    <ion-list id="idListaAtvfisica">
+      <!--<ion-item ng-if="showHabitoAtvFisica">
+
+        <div class="row">
+          <div class="col">
+            <p class="resetp ptitlebold">{{habitoAtvFisica.RealizaAtividadeFisica == true ? "Sim" : "Não"}}</p>
+          </div>
+        </div>
+        <div>
+        
+        </div>
+      </ion-item>-->
+      <ion-item ng-if="habitoAtvFisica.Atividades.length > 0" ng-repeat="habito in habitoAtvFisica.Atividades  | orderBy:'DescricaoAtividadeFisica'" href="#/menu/minha-saude/habitos/editar-detalhe-ativ-fisica/{{habito}}"
+                class="no-padding item item-icon-right itemhabitosclear">
+        <div class="row">
+          <div class="col col-90">
+            <p class="resetp">sim, {{habito.DescricaoAtividadeFisica}}, em uma frequincia de {{habito.Frequencia}}</p>
+          </div>
+        </div>
+        <!--<div class="row">
+          <div class="col">
+            <p class="resetp">{{habito.Frequencia}}</p>
+          </div>
+        </div>-->       
+        <ion-option-button class="button delete-button icon-left" ng-click="removerAtivFisica(habito.Id)"><i class="icon ion-trash-b"></i></ion-option-button>
+        <i class="icon ion-edit"></i>
+      </ion-item>
+      <ion-item ng-if="!showHabitoAtvFisica" class="no-padding item item-icon-right itemhabitosclear">
+        <div class="row">
+          <div class="col">
+            <p class="resetp">Adicione seu hábito sobre atividade fisica</p>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
